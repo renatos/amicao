@@ -2,10 +2,10 @@ package br.com.capela.amicao.modelo.venda;
 
 import org.joda.time.DateTime;
 
-import br.com.capela.amicao.modelo.base.Entidade;
+import br.com.capela.amicao.modelo.base.Entidade_old;
 import br.com.capela.amicao.modelo.comum.Dinheiro;
 
-public abstract class ItemDeVenda<T> extends Entidade<ItemDeVenda<T>> {
+public abstract class ItemDeVenda<T> extends Entidade_old<ItemDeVenda<T>> {
 
 	private String codigo;
 

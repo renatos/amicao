@@ -10,13 +10,15 @@ import org.junit.runner.RunWith
 import org.junit._
 
 import br.com.capela.amicao.modelo.pet._
+import br.com.capela.persistencia._
 
 @RunWith(classOf[JUnitRunner])
 class PersistenciaCouchDBSpec extends Spec with ShouldMatchers with BeforeAndAfter {
 	describe("Raca") {
 		it("deve persistir uma nova raca"){
 			var srd:Raca2 = new Raca2();
-			srd.salvar 
+			srd salvar() 
+			println(srd.id)
 		}
 	}
 }

@@ -3,9 +3,9 @@ package br.com.capela.amicao.modelo.cliente;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 
-import br.com.capela.amicao.modelo.base.Entidade;
+import br.com.capela.amicao.modelo.base.Entidade_old;
 
-public class Endereco extends Entidade<Endereco> {
+public class Endereco extends Entidade_old<Endereco> {
 
 	private String logradouro;
 	private String numero;

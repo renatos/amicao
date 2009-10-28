@@ -2,9 +2,9 @@ package br.com.capela.amicao.modelo.venda;
 
 import java.util.Date;
 
-import br.com.capela.amicao.modelo.base.Entidade;
+import br.com.capela.amicao.modelo.base.Entidade_old;
 
-public abstract class FormaDePagamento<T> extends Entidade<FormaDePagamento<T>> {
+public abstract class FormaDePagamento<T> extends Entidade_old<FormaDePagamento<T>> {
 
 	private String codigo;
 

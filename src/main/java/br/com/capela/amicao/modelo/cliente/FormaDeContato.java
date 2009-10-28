@@ -3,9 +3,9 @@ package br.com.capela.amicao.modelo.cliente;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 
-import br.com.capela.amicao.modelo.base.Entidade;
+import br.com.capela.amicao.modelo.base.Entidade_old;
 
-public class FormaDeContato extends Entidade<FormaDeContato> {
+public class FormaDeContato extends Entidade_old<FormaDeContato> {
 
 	private String telefone1;
 	private String telefone2;

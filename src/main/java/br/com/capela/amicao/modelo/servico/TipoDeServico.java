@@ -1,9 +1,9 @@
 package br.com.capela.amicao.modelo.servico;
 
-import br.com.capela.amicao.modelo.base.Entidade;
+import br.com.capela.amicao.modelo.base.Entidade_old;
 import br.com.capela.amicao.modelo.comum.Dinheiro;
 
-public class TipoDeServico extends Entidade<TipoDeServico> {
+public class TipoDeServico extends Entidade_old<TipoDeServico> {
 
 	private String nome;
 

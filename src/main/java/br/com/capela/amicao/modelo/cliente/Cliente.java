@@ -5,10 +5,10 @@ import java.util.List;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 
-import br.com.capela.amicao.modelo.base.Entidade;
+import br.com.capela.amicao.modelo.base.Entidade_old;
 import br.com.capela.amicao.modelo.pet.Pet;
 
-public class Cliente extends Entidade<Cliente> {
+public class Cliente extends Entidade_old<Cliente> {
 
 	private String nome;
 	private Endereco endereco;

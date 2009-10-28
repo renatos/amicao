@@ -3,10 +3,10 @@ package br.com.capela.amicao.modelo.venda;
 import java.util.Date;
 import java.util.Set;
 
-import br.com.capela.amicao.modelo.base.Entidade;
+import br.com.capela.amicao.modelo.base.Entidade_old;
 import br.com.capela.amicao.modelo.comum.Dinheiro;
 
-public class Venda extends Entidade<Venda> {
+public class Venda extends Entidade_old<Venda> {
 
 	private Long codigo;
 
