@@ -16,7 +16,7 @@ import br.com.capela.persistencia._
 class PersistenciaCouchDBSpec extends Spec with ShouldMatchers with BeforeAndAfter {
 	describe("Raca") {
 		it("deve persistir uma nova raca"){
-			var srd:Raca2 = new Raca2();
+			var srd:Raca = new Raca();
 			srd salvar() 
 			println(srd.id)
 		}
