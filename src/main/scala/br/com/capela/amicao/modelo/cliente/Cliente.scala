@@ -38,8 +38,8 @@ class Cliente extends Entidade[Cliente] with ActiveRecord[Cliente] {
 	@BeanProperty var formaDeContato:FormaDeContato = _
 	
 	@ManyToMany{
-		val cascade = Array(CascadeType.ALL),
-	    val targetEntity =  classOf[Pet],
+	    val cascade = Array(CascadeType.ALL),
+            val targetEntity =  classOf[Pet],
 	    val fetch = FetchType.LAZY 
 	}
 	@BeanProperty var pets : java.util.List[Pet] = new java.util.Vector[Pet]

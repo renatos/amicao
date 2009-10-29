@@ -32,9 +32,10 @@ class Pet extends Entidade[Pet] with ActiveRecord[Pet] {
     
     @ManyToMany{val cascade = Array(CascadeType.ALL),
 	      val targetEntity =  classOf[Cliente],
-	      val fetch = FetchType.LAZY
-	}
-	@BeanProperty var pets : java.util.List[Cliente] = new java.util.Vector[Cliente]
+	      val fetch = FetchType.LAZY,
+	      val mappedBy = "pets"
+    }
+    @BeanProperty var proprietarios : java.util.List[Cliente] = new java.util.Vector[Cliente]
     
     @ManyToOne{
     	val cascade = Array(CascadeType.PERSIST),

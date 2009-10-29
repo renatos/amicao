@@ -8,7 +8,7 @@
 	<description>Sistema para gerenciamento de Pet Shop</description>
 	<properties>
 		<scala.version_280>2.8.0.r18462-b20090811081019</scala.version_280>
-		<scala.version>2.7.5</scala.version>
+		<scala.version>2.7.7</scala.version>
 	</properties>
 	<repositories>
 		<repository>
