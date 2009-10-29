@@ -1,6 +1,12 @@
 package br.com.capela.amicao.modelo.pet;
 
-object EspecieEnum extends Enumeration{
-	type EspecieEnum = Value
-	val canina, felina = Value
+import br.com.capela.amicao.modelo.Enumv
+import br.com.capela.persistencia.EnumvType
+
+object EspecieEnum extends Enumeration with Enumv{
+	val indefinida = Value("Indefinida")
+	val canina = Value("Canina")
+	val felina = Value("Felina")
 }
+
+class EspecieEnumType extends EnumvType(EspecieEnum) {}

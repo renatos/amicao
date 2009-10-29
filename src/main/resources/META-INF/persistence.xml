@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="windows-1252" ?>
 <persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
-             version="1.0" xmlns="http://java.sun.com/xml/ns/persistence">
-               
-  <persistence-unit name="TesteAmicao" transaction-type="RESOURCE_LOCAL">
-    <provider>org.hibernate.ejb.HibernatePersistence</provider>
-    <class>br.com.capela.amicao.modelo.pet.Raca2</class>
-    <properties>
-       <property name="hibernate.show_sql" value="true"/>
-       <property name="hibernate.format_sql" value="true"/>
-       <property name="hibernate.hbm2ddl.auto" value ="create-drop" />
-       <property name="hibernate.connection.driver_class" value="org.hsqldb.jdbcDriver" />
-       <property name="hibernate.connection.url" value="jdbc:hsqldb:mem:amicao" />
-       <property name="hibernate.connection.username" value="sa" />
-       <property name="hibernate.connection.password" value="" />
-       <property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect" />
-    </properties>
-  </persistence-unit>
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+	version="1.0" xmlns="http://java.sun.com/xml/ns/persistence">
+
+	<persistence-unit name="TesteAmicao" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<class>br.com.capela.amicao.modelo.pet.Pet</class>
+		<class>br.com.capela.amicao.modelo.pet.Cor</class>
+		<class>br.com.capela.amicao.modelo.pet.Raca</class>
+		<class>br.com.capela.amicao.modelo.cliente.Cliente</class>
+		<class>br.com.capela.amicao.modelo.cliente.FormaDeContato</class>
+		<class>br.com.capela.amicao.modelo.cliente.Endereco</class>
+		<properties>
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+			<property name="hibernate.hbm2ddl.auto" value="create-drop" />
+			<property name="hibernate.connection.driver_class" value="org.hsqldb.jdbcDriver" />
+			<property name="hibernate.connection.url" value="jdbc:hsqldb:mem:amicao" />
+			<property name="hibernate.connection.username" value="sa" />
+			<property name="hibernate.connection.password" value="" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect" />
+		</properties>
+	</persistence-unit>
 
 </persistence>
