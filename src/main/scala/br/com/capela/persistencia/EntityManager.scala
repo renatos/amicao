@@ -5,5 +5,5 @@ import javax.persistence._
 object EntityManager {
 	private var em:EntityManager = Persistence createEntityManagerFactory "TesteAmicao" createEntityManager;
 	
-	def get(): EntityManager = em
+	def apply(): EntityManager = em
 }
