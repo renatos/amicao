@@ -6,8 +6,9 @@ import scala.reflect._
 
 @MappedSuperclass
 abstract class Entidade[T] {
+	
 	@Id
 	@GeneratedValue{ val strategy=GenerationType.IDENTITY }
-    @BeanProperty val id:Int= -1
+   	@BeanProperty val id:Int= -1
     
 }

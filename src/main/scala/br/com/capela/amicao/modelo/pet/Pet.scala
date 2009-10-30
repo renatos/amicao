@@ -19,11 +19,11 @@ import br.com.capela.amicao.modelo.servico.Servico;
 
 @Entity
 class Pet extends Entidade[Pet] with ActiveRecord[Pet] {
-	
-	@Column{val name="codigo"}
+
+    @Column{val name="codigo"}
     @BeanProperty var codigo:String = _
 	
-	@Column{val name="nome"}
+    @Column{val name="nome"}
     @BeanProperty var nome:String = _
     
     @Temporal(TemporalType.DATE)
