@@ -9,6 +9,7 @@
 	<properties>
 		<scala.version_280>2.8.0.r18462-b20090811081019</scala.version_280>
 		<scala.version>2.7.7</scala.version>
+		<spring.version>3.0.0.RC1</spring.version>
 	</properties>
 	<repositories>
 		<repository>
@@ -16,6 +17,12 @@
 			<name>Scala-tools Maven2 Repository</name>
 			<url>http://scala-tools.org/repo-releases</url>
 		</repository>
+		<repository>
+  			<id>springsource maven repo</id>
+  			<url>http://maven.springframework.org/milestone</url>
+ 		</repository>
+
+
 	</repositories>
 	<pluginRepositories>
 		<pluginRepository>
@@ -24,8 +31,6 @@
 			<url>http://scala-tools.org/repo-releases</url>
 		</pluginRepository>
 	</pluginRepositories>
-
-
 	<dependencies>
 		<dependency>
 			<groupId>joda-time</groupId>
@@ -111,7 +116,16 @@
 			<version>1.0</version>
 			<optional>true</optional>
 		</dependency>
-
+		
+		<!-- Spring-->
+		 <dependency>
+   	<groupId>org.springframework</groupId>
+   	<artifactId>spring-webmvc</artifactId>
+   	<version>${spring.version}</version>
+   </dependency>
+    		
+		<!-- -->
+		
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>

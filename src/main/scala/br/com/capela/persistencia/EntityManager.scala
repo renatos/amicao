@@ -32,8 +32,8 @@ object EntityManager {
 		entidades.asInstanceOf[java.util.List[Entidade[_]]]
 	}
 	
-	def findByQuery(umaConsulta:Query):java.util.List[Entidade[_]] = {
-		var entidades:java.util.List[_] = em createQuery(umaConsulta) getResultList()
+	def findByQuery(consulta:Query):java.util.List[Entidade[_]] = {
+		var entidades:java.util.List[_] = consulta getResultList()
 		entidades.asInstanceOf[java.util.List[Entidade[_]]]
 	}
 }
