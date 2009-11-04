@@ -3,6 +3,7 @@ package br.com.capela.persistencia;
 import br.com.capela.amicao.modelo.base.Entidade
 import javax.persistence._
 
+/*
 object ExecutarTransacao{
 
 	implicit def activeRecordToEntidade(activeRecord: ActiveRecord[_]):Entidade[_] = {
@@ -33,15 +34,13 @@ object Comando{
 	}
 	def deletar(em:EntityManager, entidade: Entidade[_])={em remove(entidade)}
 } 
-
+*/
 trait ActiveRecord[T <: Entidade[_]]{
 	
 	def salvar():Unit = { 
-		ExecutarTransacao.usando(this){ Comando persistir }
 	}
 	
 	def deletar():Unit = {
-		ExecutarTransacao.usando(this){ Comando deletar }
 	}
 	
 }

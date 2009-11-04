@@ -13,14 +13,17 @@ import br.com.capela.amicao.modelo.pet._
 import br.com.capela.amicao.modelo.cliente._
 import br.com.capela.persistencia._
 
-@RunWith(classOf[JUnitRunner])
-class PersistenciaCouchDBSpec extends Spec with ShouldMatchers with BeforeAndAfter {
-	describe("Raca") {
-		it("deve persistir uma nova raca"){
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+@RunWith(classOf[SpringJUnit4ClassRunner])
+@ContextConfiguration{val locations = Array("applicationContext-dataSourceCommon.xml")}
+class PersistenciaCouchDBSpec{
+	@Test
+	def raca{
 			var c:Cliente = new Cliente();
 			c.pets.add(new Pet())
 			c salvar() 
 			println(c.id)
 		}
-	}
 }
