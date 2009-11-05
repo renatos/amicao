@@ -10,12 +10,12 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Repository
 import org.springframework.transaction.annotation.Transactional
 
-import scala.reflect.{BeanProperty}
+import scala.reflect.BeanProperty
+
 
 @Repository
 @Transactional
 class ApplicationEntityManager {
-	
 	
 	var em:EntityManager = null
 	

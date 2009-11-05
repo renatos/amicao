@@ -35,9 +35,23 @@ object Comando{
 	def deletar(em:EntityManager, entidade: Entidade[_])={em remove(entidade)}
 } 
 */
+
+import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.context.annotation.Bean
+import org.springframework.stereotype.Service
+@Service
+object teste {
+	
+	@scala.reflect.BeanProperty
+	var entityManager:ApplicationEntityManager = null 
+	
+}
+
 trait ActiveRecord[T <: Entidade[_]]{
 	
+	
 	def salvar():Unit = { 
+		println(teste.entityManager)//.entityManager.salvar(this.asInstanceOf[T])
 	}
 	
 	def deletar():Unit = {

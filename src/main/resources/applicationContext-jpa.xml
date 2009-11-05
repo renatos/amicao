@@ -18,6 +18,8 @@
 		will receive a reference to the autodetected load-time weaver.
 	-->
 	<context:load-time-weaver/>
+	
+	<context:component-scan base-package="br.com.capela"/>
 
 	<!-- Configurer that replaces ${...} placeholders with values from a properties file -->
 	<!-- (in this case, JDBC-related settings for the dataSource definition below) -->
@@ -88,8 +90,8 @@
 		EntityManager will be auto-injected due to @PersistenceContext.
 		PersistenceExceptions will be auto-translated due to @Repository.
 	-->
-	<bean id="appEntityManager" class="br.com.capela.persistencia.ApplicationEntityManager"/>
-
+	<bean id="applicationEntityManager" class="br.com.capela.persistencia.ApplicationEntityManager"/>
+	
 	<!--
 		- Message source for this context, loaded from localized "messages_xx" files.
 		- Moved outside petclinic-servlet.xml since it is also used from lift now.
