@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<aspectj>
+
+        <weaver>
+                <include within="br.com.capela..*"/>
+        </weaver>
+	
+	<!--
+        <aspects>
+                <aspect name="org.springframework.samples.petclinic.aspects.UsageLogAspect"/>
+                <concrete-aspect name="org.springframework.samples.petclinic.aspects.ApplicationTraceAspect"
+                                extends="org.springframework.samples.petclinic.aspects.AbstractTraceAspect">
+                        <pointcut name="traced" expression="execution(* org.springframework.samples..*.*(..))"/>
+                </concrete-aspect>
+        </aspects>
+	-->
+</aspectj>
+

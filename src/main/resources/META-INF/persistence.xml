@@ -11,6 +11,9 @@
 		<class>br.com.capela.amicao.modelo.cliente.Cliente</class>
 		<class>br.com.capela.amicao.modelo.cliente.FormaDeContato</class>
 		<class>br.com.capela.amicao.modelo.cliente.Endereco</class>
+		<properties>
+			<property name="hibernate.bytecode.provider" value="true" />
+		</properties>
 		<!--properties>
 			<property name="hibernate.show_sql" value="true" />
 			<property name="hibernate.format_sql" value="true" />

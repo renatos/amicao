@@ -163,16 +163,38 @@
 			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.integration</groupId>
-			<artifactId>org.springframework.integration.mail</artifactId>
-			<version>1.0.3.RELEASE</version>
-		</dependency>
-		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>org.springframework.orm</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-
+		<dependency>
+	  		<groupId>org.springframework</groupId>
+  			<artifactId>org.springframework.instrument</artifactId>
+	  		<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+    			<groupId>org.aspectj</groupId>
+    			<artifactId>aspectjweaver</artifactId>
+   		 	<version>1.6.2</version>
+		</dependency> 
+		<!--
+		<dependency>
+    			<groupId>org.aspectj</groupId>
+    			<artifactId>aspectjtools</artifactId>
+    			<version>1.6.2</version>
+        	</dependency> 
+        	<dependency>
+    			<groupId>org.aspectj</groupId>
+    			<artifactId>aspectjrt</artifactId>
+    			<version>1.6.2</version>
+        	</dependency> 
+        	-->
+        	<dependency>
+    			<groupId>commons-dbcp</groupId>
+    			<artifactId>commons-dbcp</artifactId>
+    			<version>1.2.2</version>
+   		</dependency> 
+   		
 		<!-- -->
 
 		<dependency>
@@ -280,6 +302,9 @@
 					<includes>
 						<include>**/*Spec.class</include>
 					</includes>
+					<argLine>  
+           					-javaagent:${settings.localRepository}/org/springframework/org.springframework.instrument/3.0.0.RC1/org.springframework.instrument-3.0.0.RC1.jar  
+       					</argLine>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -287,6 +312,25 @@
 				<artifactId>maven-surefire-report-plugin</artifactId>
 				<version>2.4.3</version>
 			</plugin>
+			
+			<!--
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>aspectj-maven-plugin</artifactId>
+				<version>1.1</version>
+				<configuration>
+					<complianceLevel>1.5</complianceLevel>
+				</configuration>
+					<executions>
+					<execution>
+					    <goals>
+						<goal>compile</goal>
+						<goal>test-compile</goal>
+					    </goals>
+					</execution>
+				    </executions>
+			</plugin>
+			-->
 		</plugins>
 	</build>
 

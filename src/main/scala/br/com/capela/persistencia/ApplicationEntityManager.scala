@@ -10,12 +10,19 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Repository
 import org.springframework.transaction.annotation.Transactional
 
+import scala.reflect.{BeanProperty}
+
 @Repository
 @Transactional
 class ApplicationEntityManager {
 	
+	
+	var em:EntityManager = null
+	
 	@PersistenceContext
-	var em:EntityManager = _
+	def setEntityManager(em:EntityManager)={
+		this.em = em
+	} 
 	
 	@Transactional
 	def salvar(entidade:Entidade[_]):Unit = {

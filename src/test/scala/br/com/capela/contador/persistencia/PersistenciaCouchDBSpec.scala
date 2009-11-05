@@ -17,7 +17,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(classOf[SpringJUnit4ClassRunner])
-@ContextConfiguration{val locations = Array("applicationContext-dataSourceCommon.xml")}
+@ContextConfiguration{val locations = Array("classpath*:**applicationContext-jpa.xml")}
 class PersistenciaCouchDBSpec{
 	@Test
 	def raca{
