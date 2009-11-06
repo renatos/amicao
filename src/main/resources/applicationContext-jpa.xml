@@ -18,8 +18,8 @@
 		will receive a reference to the autodetected load-time weaver.
 	-->
 	<context:load-time-weaver/>
-	
-	<context:component-scan base-package="br.com.capela"/>
+
+	<context:component-scan base-package="br.com.capela" annotation-config="true"/>
 
 	<!-- Configurer that replaces ${...} placeholders with values from a properties file -->
 	<!-- (in this case, JDBC-related settings for the dataSource definition below) -->
@@ -30,8 +30,8 @@
 		for the required JAR files. Alternatively you can use another connection pool
 		such as C3P0, similarly configured using Spring.
 	-->
-	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"
-			p:driverClassName="${jdbc.driverClassName}" p:url="${jdbc.url}" p:username="${jdbc.username}"
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close"
+			p:driverClass="${jdbc.driverClassName}" p:jdbcUrl="${jdbc.url}" p:user="${jdbc.username}"
 			p:password="${jdbc.password}"/>
 
 	<!-- JNDI DataSource for JEE environments -->
@@ -44,7 +44,7 @@
 			p:dataSource-ref="dataSource">
 		<property name="jpaVendorAdapter">
 			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"
-					p:database="${jpa.database}" 
+					p:database="${jpa.database}"
 					p:showSql="${jpa.showSql}"/>
 		</property>
 	</bean>
@@ -70,14 +70,15 @@
 	-->
 	<tx:annotation-driven mode="aspectj"/>
 
+  <aop:aspectj-autoproxy proxy-target-class="true"/>
 	<!--
 		Simply defining this bean will cause requests to owner names to be saved.
 		This aspect is defined in petclinic.jar's META-INF/aop.xml file.
 		Note that we can dependency inject this bean like any other bean.
-		
+
 		<bean class="org.springframework.samples.petclinic.aspects.UsageLogAspect" p:historySize="300"/>
 	-->
-	
+
 
 	<!--
 		Post-processor to perform exception translation on @Repository classes (from native
@@ -90,8 +91,7 @@
 		EntityManager will be auto-injected due to @PersistenceContext.
 		PersistenceExceptions will be auto-translated due to @Repository.
 	-->
-	<bean id="applicationEntityManager" class="br.com.capela.persistencia.ApplicationEntityManager"/>
-	
+
 	<!--
 		- Message source for this context, loaded from localized "messages_xx" files.
 		- Moved outside petclinic-servlet.xml since it is also used from lift now.
@@ -100,3 +100,4 @@
 			p:basename="messages"/>
 
 </beans>
+

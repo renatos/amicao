@@ -12,9 +12,6 @@
 		<class>br.com.capela.amicao.modelo.cliente.FormaDeContato</class>
 		<class>br.com.capela.amicao.modelo.cliente.Endereco</class>
 		<properties>
-			<property name="hibernate.bytecode.provider" value="true" />
-		</properties>
-		<!--properties>
 			<property name="hibernate.show_sql" value="true" />
 			<property name="hibernate.format_sql" value="true" />
 			<property name="hibernate.hbm2ddl.auto" value="create-drop" />
@@ -23,7 +20,9 @@
 			<property name="hibernate.connection.username" value="sa" />
 			<property name="hibernate.connection.password" value="" />
 			<property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect" />
-		</properties-->
+			<property name="hibernate.bytecode.provider" value="true" />
+		</properties>
 	</persistence-unit>
 
 </persistence>
+
