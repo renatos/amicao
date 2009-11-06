@@ -12,7 +12,7 @@ import org.junit._
 import br.com.capela.amicao.modelo.pet._
 import br.com.capela.amicao.modelo.cliente._
 import br.com.capela.persistencia._
-import br.com.capela.amicao.modelo.servico.PetService
+import br.com.capela.amicao.servico.pet.PetService
 
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -32,6 +32,10 @@ class PersistenciaCouchDBSpec{
 			var c:Cliente = new Cliente();
 			c.pets.add(new Pet())
             service.salvar(new Pet())
+           	
+           	println(service.listarTodos())
+           	 
+           
 			println("service!!!! "+service)
 		}
 }

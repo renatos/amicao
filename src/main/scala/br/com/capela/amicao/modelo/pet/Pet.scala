@@ -3,7 +3,6 @@ package br.com.capela.amicao.modelo.pet;
 import java.util.List;
 
 import br.com.capela.amicao.modelo.base.Entidade
-import br.com.capela.persistencia._
 
 import java.io.Serializable;
 import java.util.Date
@@ -18,7 +17,7 @@ import br.com.capela.amicao.modelo.cliente.Cliente;
 import br.com.capela.amicao.modelo.servico.Servico;
 
 @Entity
-class Pet extends Entidade[Pet] with ActiveRecord[Pet] {
+class Pet extends Entidade[Pet]{
 
     @Column{val name="codigo"}
     @BeanProperty var codigo:String = _

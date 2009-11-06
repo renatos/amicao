@@ -1,8 +1,8 @@
 package br.com.capela.amicao.modelo.cliente;
 
-import br.com.capela.persistencia.Repositorio;
+import br.com.capela.persistencia.Repository;
 
-trait ClienteRepository extends Repositorio[Cliente]{
+trait ClienteRepository extends Repository[Cliente]{
 
 }
 

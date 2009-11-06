@@ -1,7 +1,7 @@
 package br.com.capela.amicao.modelo.pet;
 
 import br.com.capela.amicao.modelo.Enumv
-import br.com.capela.persistencia.EnumvType
+import br.com.capela.amicao.persistencia.EnumvType
 
 object SexoEnum extends Enumeration with Enumv{
 	val indefinido = Value("Indefinido")

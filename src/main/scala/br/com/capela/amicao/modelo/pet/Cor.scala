@@ -1,7 +1,6 @@
 package br.com.capela.amicao.modelo.pet;
 
 import br.com.capela.amicao.modelo.base.Entidade
-import br.com.capela.persistencia._
 
 import java.io.Serializable;
 
@@ -10,7 +9,7 @@ import javax.persistence._
 import scala.reflect._
 
 @Entity
-class Cor(_codigo:String, _nome:String) extends Entidade[Cor] with ActiveRecord[Cor] {
+class Cor(_codigo:String, _nome:String) extends Entidade[Cor] {
 
 	def this() = this("","");
 	

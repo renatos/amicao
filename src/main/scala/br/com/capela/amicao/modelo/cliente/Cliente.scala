@@ -6,8 +6,6 @@ import org.apache.commons.lang.builder.HashCodeBuilder;
 import br.com.capela.amicao.modelo.base.Entidade;
 import br.com.capela.amicao.modelo.pet.Pet;
 
-import br.com.capela.persistencia._
-
 import java.io.Serializable;
 
 import javax.persistence._
@@ -15,7 +13,7 @@ import javax.persistence._
 import scala.reflect._
 
 @Entity
-class Cliente extends Entidade[Cliente] with ActiveRecord[Cliente] {
+class Cliente extends Entidade[Cliente] {
 	
 	@Column{val name="codigo"}
     @BeanProperty var codigo:String = _
