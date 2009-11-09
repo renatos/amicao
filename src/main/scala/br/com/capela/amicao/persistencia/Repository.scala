@@ -6,7 +6,7 @@ trait Repository[T]{
 
     def excluir(entidade:T) ;
 
-    def listarTodos():java.util.List[T];
+    def listarTodos():List[T];
     
     def getById(id:Int):T;
 

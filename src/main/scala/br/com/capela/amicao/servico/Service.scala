@@ -16,7 +16,7 @@ class Service[T <: Entidade[_]]{
 
     def excluir(entidade:T) = this.repository.excluir(entidade)    
 
-    def listarTodos():java.util.List[T] = this.repository.listarTodos()    
+    def listarTodos():List[T] = this.repository.listarTodos()    
     
     def getById(id:Int):T = this.repository.getById(id)
 	

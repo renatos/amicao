@@ -14,47 +14,48 @@ import scala.reflect._
 
 @Entity
 class Cliente extends Entidade[Cliente] {
-	
-	@Column{val name="codigo"}
+
+    @Column{val name="codigo"}
     @BeanProperty var codigo:String = _
-	
-	@Column{val name="nome"}
+
+    @Column{val name="nome"}
     @BeanProperty var nome:String = _
-	
+
     @OneToOne{
-		val cascade = Array(CascadeType.ALL),
-	    val targetEntity = classOf[Endereco]
+        val cascade = Array(CascadeType.ALL),
+        val targetEntity = classOf[Endereco]
     }
-	@PrimaryKeyJoinColumn()
-	@BeanProperty var endereco:Endereco = _
-	
-	@OneToOne{
-		val cascade = Array(CascadeType.ALL),
-	    val targetEntity = classOf[FormaDeContato]
-	}
-	@PrimaryKeyJoinColumn()
-	@BeanProperty var formaDeContato:FormaDeContato = _
-	
-	@ManyToMany{
-	    val cascade = Array(CascadeType.ALL),
-            val targetEntity =  classOf[Pet],
-	    val fetch = FetchType.LAZY 
-	}
-	@BeanProperty var pets : java.util.List[Pet] = new java.util.Vector[Pet]
+    @PrimaryKeyJoinColumn()
+    @BeanProperty var endereco:Endereco = _
+
+    @OneToOne{
+        val cascade = Array(CascadeType.ALL),
+        val targetEntity = classOf[FormaDeContato]
+    }
+    @PrimaryKeyJoinColumn()
+    @BeanProperty var formaDeContato:FormaDeContato = _
+
+    @ManyToMany{
+        val cascade = Array(CascadeType.PERSIST),
+        val targetEntity =  classOf[Pet],
+        val fetch = FetchType.LAZY
+    }
+    @BeanProperty var pets : java.util.List[Pet] = new java.util.Vector[Pet]
 
 
-	def isMesmaEntidade(outro:Cliente):Boolean =  {
-		new EqualsBuilder()
-			.append(nome, outro.nome)
-			.append(endereco, outro.endereco)
-			.isEquals();
-	}
+    def isMesmaEntidade(outro:Cliente):Boolean =  {
+        new EqualsBuilder()
+        .append(nome, outro.nome)
+        .append(endereco, outro.endereco)
+        .isEquals();
+    }
 
-	override def hashCode():Int = {
-		new HashCodeBuilder()
-			.append(nome)
-			.append(endereco)
-			.toHashCode();
-	}
+    override def hashCode():Int = {
+        new HashCodeBuilder()
+        .append(nome)
+        .append(endereco)
+        .toHashCode();
+    }
 
 }
+

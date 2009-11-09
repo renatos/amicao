@@ -304,7 +304,7 @@
 				<version>2.4.2</version>
 				<configuration>
 					<includes>
-						<include>**/*Spec.class</include>
+						<include>**/*Test.class</include>
 					</includes>
 					<argLine>
            					-javaagent:${settings.localRepository}/org/springframework/org.springframework.instrument/3.0.0.RC1/org.springframework.instrument-3.0.0.RC1.jar

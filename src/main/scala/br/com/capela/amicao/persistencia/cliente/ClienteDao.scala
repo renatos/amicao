@@ -7,16 +7,17 @@ import org.springframework.transaction.annotation.Transactional
 
 @Repository
 @Transactional
-class ClienteDao extends ClienteRepository{
+class ClienteDao extends Dao[Cliente]  with ClienteRepository {
 
-    def salvar(entidade:Cliente) = {}
+    def listarTodos():List[Cliente] = {
+        super.listarTodos(classOf[Cliente])
+    }
 
-    def excluir(entidade:Cliente) = {}
-
-    def listarTodos():java.util.List[Cliente] = { new java.util.ArrayList[Cliente]}
-	
     def getById(id:Int):Cliente = {
-    	new Cliente
+    	var cliente = super.getById(classOf[Cliente],id)
+    	if(cliente != null)
+            cliente.pets.iterator
+    	cliente
     }
 }
 

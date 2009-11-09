@@ -8,12 +8,15 @@ import org.springframework.stereotype.Repository
 @Repository
 class PetDao extends Dao[Pet]  with PetRepository {
 
-    def listarTodos():java.util.List[Pet] = {
+    def listarTodos():List[Pet] = {
         super.listarTodos(classOf[Pet])
     }
     
     def getById(id:Int):Pet = {
-    	super.getById(classOf[Pet],id)
+    	var pet = super.getById(classOf[Pet],id)
+        if(pet != null)
+            pet.proprietarios.iterator
+        pet
     }
 
 }

@@ -29,22 +29,22 @@ class Pet extends Entidade[Pet]{
     @Column{val name="dataDeNascimento"}
     @BeanProperty var Date:Date = _
     
-    @ManyToMany{val cascade = Array(CascadeType.ALL),
-	      val targetEntity =  classOf[Cliente],
-	      val fetch = FetchType.LAZY,
-	      val mappedBy = "pets"
+    @ManyToMany{val cascade = Array(CascadeType.PERSIST),
+                val targetEntity =  classOf[Cliente],
+                val fetch = FetchType.LAZY,
+                val mappedBy = "pets"
     }
     @BeanProperty var proprietarios : java.util.List[Cliente] = new java.util.Vector[Cliente]
     
     @ManyToOne{
     	val cascade = Array(CascadeType.PERSIST),
-	    val targetEntity = classOf[Raca]
+        val targetEntity = classOf[Raca]
     }
     @BeanProperty var raca: Raca = _
     
     @ManyToOne{
     	val cascade = Array(CascadeType.PERSIST),
-	    val targetEntity = classOf[Cor]
+        val targetEntity = classOf[Cor]
     }
     @BeanProperty var corPredominante: Cor = _
     

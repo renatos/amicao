@@ -29,8 +29,7 @@ class Dao[T <: Entidade[_]] {
 
 	@Transactional
 	def excluir(entidade:T) {
-		em remove(entidade)
-
+		em remove(em.merge(entidade))
 	}
 
 	@Transactional{val readOnly = true}
@@ -39,11 +38,11 @@ class Dao[T <: Entidade[_]] {
 	}
 
 	@Transactional{val readOnly = true}
-	def listarTodos(clazz:Class[_]):java.util.List[T] = {
+	def listarTodos(clazz:Class[_]):List[T] = {
 		implicit def toQueryString(clazz:Class[_]):String = {String.format("select e from %s e order by e.id", clazz.getSimpleName())}
 
 		var entidades:java.util.List[_] = em createQuery(clazz) getResultList()
-		entidades.asInstanceOf[java.util.List[T]]
+		List.fromArray(entidades.toArray()).asInstanceOf[List[T]]
 	}
 
 	@Transactional{val readOnly = true}
