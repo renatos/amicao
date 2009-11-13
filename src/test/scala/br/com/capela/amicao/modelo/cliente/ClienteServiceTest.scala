@@ -34,9 +34,7 @@ class ClienteServiceTest{
         clientes foreach { clienteService.excluir(_) }
 
         def pets = petService.listarTodos();
-        
-        println("PETS: "+pets)
-
+     
         pets foreach {petService.excluir(_) }
     }
 
