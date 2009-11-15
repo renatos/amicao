@@ -126,6 +126,12 @@
 			<artifactId>scala-compiler</artifactId>
 			<version>${scala.version}</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.scala-lang</groupId>
+			<artifactId>scala-swing</artifactId>
+			<version>${scala.version}</version>
+		</dependency>
 
     <dependency>
 			<groupId>org.scala-lang</groupId>
