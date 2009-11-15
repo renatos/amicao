@@ -127,6 +127,13 @@
 			<version>${scala.version}</version>
 		</dependency>
 
+    <dependency>
+			<groupId>org.scala-lang</groupId>
+			<artifactId>scala-swing</artifactId>
+			<version>${scala.version}</version>
+		</dependency>
+
+
 		<dependency>
 			<groupId>org.scalatest</groupId>
 			<artifactId>scalatest</artifactId>
@@ -301,7 +308,6 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.4.2</version>
 				<configuration>
 					<includes>
 						<include>**/*Test.class</include>
