@@ -51,7 +51,7 @@ object ClienteForm extends SimpleGUIApplication{
         b
       }
       
-      val intervalMutex = new ButtonGroup
+      val intervalMutex:ButtonGroup = new ButtonGroup
       val multiInterval = radio(intervalMutex, "Multiple Interval Selection")
       val elementInterval = radio(intervalMutex, "Single Selection")
       val singleInterval = radio(intervalMutex, "Single Interval Selection")
@@ -126,10 +126,10 @@ object ClienteForm extends SimpleGUIApplication{
 		
 }
 
-@RunWith(classOf[SpringJUnit4ClassRunner])
-@ContextConfiguration{val locations = Array("classpath*:**applicationContext-jpa.xml")}
+//@RunWith(classOf[SpringJUnit4ClassRunner])
+//@ContextConfiguration{val locations = Array("classpath*:**applicationContext-jpa.xml")}
 class ClienteFormTest {
-    @Test
+    //@Test
     def exibir{	
     	ClienteForm.main(Array[String]())
     	
