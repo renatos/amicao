@@ -4,7 +4,7 @@ import java.awt.Dimension
 import swing._
 import swing.event._
 import GridBagPanel._
-import javax.swing._
+import javax.swing.{JInternalFrame,JDesktopPane}
 
 import br.com.capela.amicao.servico.cliente.ClienteService
 import br.com.capela.amicao.servico.pet.PetService
@@ -22,27 +22,33 @@ import org.springframework.beans.factory.annotation.Autowired
 
 
 object MainFrameTest extends SimpleGUIApplication{
-	
+	var desktop = new DesktopPane 
 	val ui = new BoxPanel(Orientation.Vertical) {
-		var desktop = new DesktopPane 
-		var internalFrame = new JInternalFrame("Frame Interno",true, true, true, true)
+		
+		
+		contents += desktop
+		
+	}
+ 	
+ 	def createInternalFrame() = {
+ 		var internalFrame = new JInternalFrame("Frame Interno",true, true, true, true)
 		internalFrame.pack
 		internalFrame.setVisible(true)
 		internalFrame.setSize(100,100)
 		desktop.add(internalFrame)
-		contents += desktop
-		
-	}
- 
+ 	}
+ 	
 	def top = new MainFrame {
-		title = "Table Selection"
+		title = "Amicão"
 		menuBar = new MenuBar 
 		var menu = new Menu("Teste")
-		var menuItem = new MenuItem("Item");
 		
-		menu.contents += menuItem
+		menu.contents += new MenuItem("Item");
+		menu.contents += new MenuItem(Action("An action item") {
+		      createInternalFrame
+		    });
 		menuBar.contents += menu
-		size = new Dimension(600,400)
+		preferredSize=(600,400)
 		contents = ui
 	}
 }
@@ -52,8 +58,8 @@ class DesktopPane extends Component {
 	
 	def add(c:java.awt.Component) = peer.add(c)
 }
-class InternalFrame extends Component {
-	override lazy val peer: JInternalFrame = new JInternalFrame() with SuperMixin
+class InternalFrame(nome:String, p1:Boolean,p2:Boolean,p3:Boolean) extends Component {
+	override lazy val peer: JInternalFrame = new JInternalFrame(nome,p1,p2,p3) with SuperMixin
 }
 
 
