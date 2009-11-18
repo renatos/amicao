@@ -16,7 +16,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.beans.factory.annotation.Autowired
 
 @RunWith(classOf[SpringJUnit4ClassRunner])
-@ContextConfiguration{val locations = Array("classpath*:**applicationContext-jpa.xml")}
+@ContextConfiguration{val locations = Array("classpath*:**applicationContext.xml")}
 class PetServiceTest{
 
     private var clienteService:ClienteService = _
