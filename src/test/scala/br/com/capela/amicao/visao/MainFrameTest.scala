@@ -1,15 +1,13 @@
 package br.com.capela.amicao.visao
 
-import java.awt.Dimension
-import swing._
-import swing.event._
-import GridBagPanel._
-import javax.swing.{JInternalFrame,JDesktopPane,JPanel}
+import java.awt.event._
+import java.awt._
+import javax.swing._
 
 import br.com.capela.amicao.servico.cliente.ClienteService
 import br.com.capela.amicao.servico.pet.PetService
 
-import br.com.capela.amicao.modelo.pet.Pet
+import br.com.capela.amicao.modelo.pet._
 
 import org.scalatest.junit.JUnitRunner
 import org.junit.runner.RunWith
@@ -21,47 +19,65 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.beans.factory.annotation.Autowired
 
 
-object MainFrameTest extends SimpleGUIApplication{
-	var desktop = new DesktopPane 
-	val ui = new BoxPanel(Orientation.Vertical) {
-		contents += desktop
-	}
+object MainFrameTest extends JFrame("Amicao"){
+	var desktop = new JDesktopPane 
  	
- 	def createInternalFrame() = {
- 		var internalFrame = new InternalFrame("Frame Interno",true, true, true, true)
+	implicit def actionPerformedWrapper(func: (ActionEvent) => Unit) = 
+		new ActionListener { 
+		  def actionPerformed(e:ActionEvent) = func(e) 
+		}
+	
+ 
+	def init = {
+	  var menuBar:JMenuBar = new JMenuBar
+	  var menu:JMenu = new JMenu("Cadastros")
+	  var menuItem:JMenuItem = new JMenuItem("Raca")
+	  
+	  menu add menuItem 
+      menuBar add menu
+      
+      setJMenuBar(menuBar)
+	  getContentPane().add(desktop);
+      
+      menuItem.addActionListener(
+        (e:ActionEvent) => createInternalFrame
+      )
+      setPreferredSize(new Dimension(600,400))
+      setSize(600,400)
+	  setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE)
+	  pack
+	  setVisible(true)
+	}
+	
+ 	def createInternalFrame():Unit = {
+ 		var internalFrame = new JInternalFrame("Frame Interno",true, true, true, true)
 		internalFrame.pack
-		internalFrame.visible = true
-		internalFrame.size=(200,100)
-		desktop.add(internalFrame)
+		internalFrame.setVisible(true)
+		internalFrame.setSize(200,100)
+		internalFrame.add(createRacaForm())
+		desktop.add(internalFrame) 
  	}
  	
- 	def createRacaForm() = {
+ 	def createRacaForm():JPanel = {
  	  var racaForm = new JPanel()
+ 	  var nome = new JTextField
+ 	  var salvar = new JButton("Salvar")
+ 	  nome.setColumns(20)
+ 	  racaForm.add(nome)
+ 	  racaForm.add(salvar)
+
+      salvar.addActionListener(
+ 			  (e:ActionEvent) => salvarRaca(nome.getText())
+ 	  )
+ 	  
  	  racaForm
  	}
  	
-  
-	def top = new MainFrame {
-		title = "Amicao"
-		menuBar = new MenuBar 
-		var menu = new Menu("Teste")
-		
-		menu.contents += new MenuItem("Item");
-		menu.contents += new MenuItem(Action("An action item") {createInternalFrame});
-		menuBar.contents += menu
-		preferredSize=(600,400)
-		contents = ui
-	}
-}
-
-class DesktopPane extends Component {
-	override lazy val peer: JDesktopPane = new JDesktopPane() with SuperMixin
-	def add(c:Component) = peer.add(c.peer)
-}
-class InternalFrame(nome:String, p1:Boolean,p2:Boolean,p3:Boolean,p4:Boolean) extends Component {
-	override lazy val peer: JInternalFrame = new JInternalFrame(nome,p1,p2,p3,p4) with SuperMixin
-	
-	def pack() = peer.pack
+    def salvarRaca(nome:String):Unit = {
+      var raca = new Raca(); 
+      raca.setNome(nome);
+      println(raca) 
+    }
 }
 
 
@@ -71,8 +87,9 @@ class InternalFrame(nome:String, p1:Boolean,p2:Boolean,p3:Boolean,p4:Boolean) ex
 class MainTest {
     @Test
     def exibir{	
-    	MainFrameTest.main(Array[String]())
+    	MainFrameTest.init
     	
     	Thread.sleep(1000000)
     }
 }
+
