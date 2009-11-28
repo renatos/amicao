@@ -14,7 +14,7 @@ import scala.reflect._
 
 @Entity
 class Cliente extends Entidade[Cliente] {
-
+	
     @Column{val name="codigo"}
     @BeanProperty var codigo:String = _
 

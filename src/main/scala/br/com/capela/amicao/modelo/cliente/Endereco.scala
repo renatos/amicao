@@ -14,7 +14,7 @@ import scala.reflect._
 
 @Entity
 class Endereco extends Entidade[Endereco] {
-
+	
 	@Column{val name="logradouro"}
     @BeanProperty var logradouro:String = _
     

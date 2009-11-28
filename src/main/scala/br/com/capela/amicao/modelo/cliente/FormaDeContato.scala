@@ -15,6 +15,7 @@ import scala.reflect._
 @Entity
 class FormaDeContato extends Entidade[FormaDeContato]{
 
+  
 	@Column{val name="telefone1"}
     @BeanProperty var telefone1:String = _
     

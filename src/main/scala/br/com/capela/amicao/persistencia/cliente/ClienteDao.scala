@@ -13,7 +13,7 @@ class ClienteDao extends Dao[Cliente]  with ClienteRepository {
         super.listarTodos(classOf[Cliente])
     }
 
-    def getById(id:Int):Cliente = {
+    def getById(id:Long):Cliente = {
     	var cliente = super.getById(classOf[Cliente],id)
     	if(cliente != null)
             cliente.pets.iterator

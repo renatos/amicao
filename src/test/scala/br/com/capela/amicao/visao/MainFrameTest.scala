@@ -81,7 +81,7 @@ object MainFrameTest extends JFrame("Amicao"){
 }
 
 
-
+/*
 @RunWith(classOf[SpringJUnit4ClassRunner])
 @ContextConfiguration{val locations = Array("classpath*:**applicationContext.xml")}
 class MainTest {
@@ -92,4 +92,4 @@ class MainTest {
     	Thread.sleep(1000000)
     }
 }
-
+*/

@@ -4,6 +4,24 @@
 	version="1.0" xmlns="http://java.sun.com/xml/ns/persistence">
 
 	<persistence-unit name="TesteAmicao" transaction-type="RESOURCE_LOCAL">
+		<provider>org.datanucleus.store.appengine.jpa.DatastorePersistenceProvider</provider>
+		<class>br.com.capela.amicao.modelo.pet.Pet</class>
+		<class>br.com.capela.amicao.modelo.pet.Cor</class>
+		<class>br.com.capela.amicao.modelo.pet.Raca</class>
+		<class>br.com.capela.amicao.modelo.cliente.Cliente</class>
+		<class>br.com.capela.amicao.modelo.cliente.FormaDeContato</class>
+		<class>br.com.capela.amicao.modelo.cliente.Endereco</class>
+		<exclude-unlisted-classes>true</exclude-unlisted-classes>
+		<properties>
+			<property name="datanucleus.NontransactionalRead" value="true" />
+			<property name="datanucleus.NontransactionalWrite" value="true" />
+			<property name="datanucleus.appengine.autoCreateDatastoreTxns" value="true" />
+			<property name="datanucleus.ConnectionURL" value="appengine" />
+		</properties>
+	</persistence-unit>
+
+	<persistence-unit name="TesteAmicao_old"
+		transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		<class>br.com.capela.amicao.modelo.pet.Pet</class>
 		<class>br.com.capela.amicao.modelo.pet.Cor</class>

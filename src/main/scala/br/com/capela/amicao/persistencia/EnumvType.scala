@@ -6,24 +6,23 @@ import scala._
 import java.io._
 import java.sql.{ResultSet, PreparedStatement, Types}
 import javax.persistence._
-import org.hibernate.usertype.UserType
 
 abstract class EnumvType(val et: Enumeration with Enumv)
-   extends UserType {
+   {
 
    val SQL_TYPES = Array({Types.VARCHAR})
 
-   override def sqlTypes() = SQL_TYPES
+   def sqlTypes() = SQL_TYPES
 
-   override def returnedClass = classOf[et.Value]
+   def returnedClass = classOf[et.Value]
 
-   override def equals(x: Object, y: Object): Boolean = {
+   def equals(x: Object, y: Object): Boolean = {
      return x == y
    }
 
-   override def hashCode(x: Object) = x.hashCode
+   def hashCode(x: Object) = x.hashCode
 
-   override def nullSafeGet(resultSet: ResultSet,
+   def nullSafeGet(resultSet: ResultSet,
                             names: Array[String],
                             owner: Object): Object = {
      val value = resultSet.getString(names(0))
@@ -33,7 +32,7 @@ abstract class EnumvType(val et: Enumeration with Enumv)
      }
    }
 
-   override def nullSafeSet(statement: PreparedStatement,
+   def nullSafeSet(statement: PreparedStatement,
                             value: Object,
                             index: Int): Unit = {
      if (value == null) {
@@ -44,17 +43,17 @@ abstract class EnumvType(val et: Enumeration with Enumv)
      }
    }
 
-   override def deepCopy(value: Object): Object = value
+   def deepCopy(value: Object): Object = value
 
-   override def isMutable() = false
+   def isMutable() = false
 
-   override def disassemble(value: Object) =
+   def disassemble(value: Object) =
      value.asInstanceOf[Serializable]
 
-   override def assemble(cached: Serializable, owner: Object):
+   def assemble(cached: Serializable, owner: Object):
      Serializable = cached
 
-   override def replace(original: Object,
+   def replace(original: Object,
                         target: Object,
                         owner: Object) = original
 

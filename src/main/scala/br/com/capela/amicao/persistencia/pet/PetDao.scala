@@ -12,7 +12,7 @@ class PetDao extends Dao[Pet]  with PetRepository {
         super.listarTodos(classOf[Pet])
     }
     
-    def getById(id:Int):Pet = {
+    def getById(id:Long):Pet = {
     	var pet = super.getById(classOf[Pet],id)
         if(pet != null)
             pet.proprietarios.iterator

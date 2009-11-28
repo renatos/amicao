@@ -6,10 +6,8 @@ import javax.persistence._
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Repository
-import org.springframework.transaction.annotation.Transactional
 
 @Repository
-@Transactional
 class Dao[T <: Entidade[_]] {
 
 	var em:EntityManager = null
@@ -19,7 +17,7 @@ class Dao[T <: Entidade[_]] {
 		this.em = em
 	}
 
-	@Transactional
+	
 	def salvar(entidade:T):Unit = {
 		if (entidade.id < 0)
 			em persist(entidade)
@@ -27,17 +25,14 @@ class Dao[T <: Entidade[_]] {
 			em merge(entidade)
 	}
 
-	@Transactional
 	def excluir(entidade:T) {
 		em remove(em.merge(entidade))
 	}
-
-	@Transactional{val readOnly = true}
-	def getById(clazz:Class[T], id:Int):T = {
+	
+	def getById(clazz:Class[T], id:Long):T = {
 		em.find(clazz,id).asInstanceOf[T]
 	}
 
-	@Transactional{val readOnly = true}
 	def listarTodos(clazz:Class[_]):List[T] = {
 		implicit def toQueryString(clazz:Class[_]):String = {String.format("select e from %s e order by e.id", clazz.getSimpleName())}
 
@@ -45,7 +40,6 @@ class Dao[T <: Entidade[_]] {
 		List.fromArray(entidades.toArray()).asInstanceOf[List[T]]
 	}
 
-	@Transactional{val readOnly = true}
 	def findByQuery(consulta:Query):java.util.List[T] = {
 		var entidades:java.util.List[_] = consulta getResultList()
 		entidades.asInstanceOf[java.util.List[T]]

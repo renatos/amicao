@@ -8,7 +8,6 @@ import javax.persistence.MappedSuperclass;
 public abstract class Entidade_old<T> {
 
 	@Id
-	@org.hibernate.annotations.GenericGenerator(name = "hibernate-uuid", strategy = "uuid")
 	@GeneratedValue(generator = "hibernate-uuid")
 	protected Long id;
 

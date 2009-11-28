@@ -13,10 +13,10 @@ class Cor(_codigo:String, _nome:String) extends Entidade[Cor] {
 
 	def this() = this("","");
 	
-    	@Column{val name="codigo"}
-    	@BeanProperty var codigo: String = _codigo
+   	@Column{val name="codigo"}
+   	@BeanProperty var codigo: String = _codigo
 
-    	@Column{val name="nome"}
-    	@BeanProperty var nome:String = _nome
+   	@Column{val name="nome"}
+   	@BeanProperty var nome:String = _nome
 
 }

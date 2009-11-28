@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-2.5.xsd"
+	default-init-method="init">
+
+	<!--import resource="/applicationContext.xml"/-->
+
+	<!-- AppEngine Services to be created via the factory bean -->
+	<bean id="userService" class="com.google.appengine.api.users.UserServiceFactory"
+		factory-method="getUserService" />
+
+	<bean id="mailService" class="com.google.appengine.api.mail.MailServiceFactory"
+		factory-method="getMailService" />
+
+	<!--bean id="gson" class="com.google.gson.Gson"/-->
+
+</beans>
+

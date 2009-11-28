@@ -9,8 +9,6 @@ import java.util.Date
 
 import javax.persistence._
 
-import org.hibernate.annotations.{Type}
-
 import scala.reflect._
 
 import br.com.capela.amicao.modelo.cliente.Cliente;
@@ -18,7 +16,7 @@ import br.com.capela.amicao.modelo.servico.Servico;
 
 @Entity
 class Pet extends Entidade[Pet]{
-
+	
     @Column{val name="codigo"}
     @BeanProperty var codigo:String = _
 	
@@ -48,11 +46,11 @@ class Pet extends Entidade[Pet]{
     }
     @BeanProperty var corPredominante: Cor = _
     
-    @Type{val `type` = "br.com.capela.amicao.modelo.pet.EspecieEnumType"}
+    @Enumerated(EnumType.STRING)
     @Column{val name="especie"}
     @BeanProperty var especie: EspecieEnum.Value = EspecieEnum.indefinida
 
-    @Type{val `type` = "br.com.capela.amicao.modelo.pet.SexoEnumType"}
+    @Enumerated(EnumType.STRING)
     @Column{val name="sexo"}
     @BeanProperty var sexo: SexoEnum.Value = SexoEnum.indefinido
 	

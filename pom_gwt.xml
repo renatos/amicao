@@ -10,7 +10,7 @@
 	<properties>
 		<scala.version_280>2.8.0.r18462-b20090811081019</scala.version_280>
 		<scala.version>2.7.7</scala.version>
-		<spring.version>3.0.0.RC1</spring.version> 
+		<spring.version>3.0.0.RC1</spring.version>
 		<gwtVersion>1.7.0</gwtVersion>
 	</properties>
 	<repositories>
@@ -43,16 +43,10 @@
 			<url>http://gwt-maven.googlecode.com/svn/trunk/mavenrepo/</url>
 		</repository>
 		<repository>
-            <id>DataNucleus_Repos</id>
-            <name>DataNucleus Repository</name>
-            <url>http://www.datanucleus.org/downloads/maven</url>
-            <layout>legacy</layout>
-        </repository>
-        <repository>
-            <id>DataNucleus_Repos2</id>
-            <name>DataNucleus Repository</name>
-            <url>http://www.datanucleus.org/downloads/maven2</url>
-        </repository>
+			<id>DataNucleus_Repos2</id>
+			<name>DataNucleus Repository</name>
+			<url>http://www.datanucleus.org/downloads/maven2</url>
+		</repository>
 
 
 	</repositories>
@@ -67,29 +61,76 @@
 			<name>GWT Maven2 Repository</name>
 			<url>http://gwt-maven.googlecode.com/svn/trunk/mavenrepo</url>
 		</pluginRepository>
-		<pluginRepository>
-			<id>DataNucleus_2</id>
-			<url>http://www.datanucleus.org/downloads/maven2</url>
-		</pluginRepository>
 	</pluginRepositories>
 	<dependencies>
 		<dependency>
 			<groupId>joda-time</groupId>
 			<artifactId>joda-time</artifactId>
 			<version>1.6</version>
+			<scope>compile</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>commons-lang</groupId>
-  			<artifactId>commons-lang</artifactId>
-  			<version>2.4</version>
+			<artifactId>commons-lang</artifactId>
+			<version>2.4</version>
+			<scope>compile</scope>
 		</dependency>
-		
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-cglib-repack</artifactId>
+			<version>2.1_3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.4.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.4.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate</artifactId>
+			<version>3.2.7.ga</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>3.3.2.GA</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-api</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-annotations</artifactId>
+			<version>3.4.0.GA</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-commons-annotations</artifactId>
+			<version>3.3.0.ga</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>3.4.0.GA</version>
+		</dependency>
+		<dependency>
+			<groupId>c3p0</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>0.9.1</version>
+		</dependency>
+
 		<dependency>
 			<groupId>hsqldb</groupId>
 			<artifactId>hsqldb</artifactId>
 			<version>1.8.0.7</version>
-			<scope>test</scope>
 		</dependency>
 
 		<dependency>
@@ -117,21 +158,36 @@
 			<optional>true</optional>
 		</dependency>
 
+		<!-- GWT-->
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-servlet</artifactId>
+			<version>${gwtVersion}</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-user</artifactId>
+			<version>${gwtVersion}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-dev</artifactId>
+			<version>${gwtVersion}</version>
+			<classifier>${platform}-libs</classifier>
+			<type>zip</type>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-dev</artifactId>
+			<version>${gwtVersion}</version>
+			<classifier>${platform}</classifier>
+			<scope>provided</scope>
+		</dependency>
 		<!-- Spring-->
-		        <!-- Use ASM 1.5.3 for Spring at runtime, but we need 3.0+ for Data Nucleus during compile
--->
-        <dependency>
-            <artifactId>com.springsource.org.objectweb.asm</artifactId>
-            <groupId>org.objectweb.asm</groupId>
-            <version>1.5.3</version>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <artifactId>com.springsource.org.objectweb.asm.attrs</artifactId>
-            <groupId>org.objectweb.asm</groupId>
-            <version>1.5.3</version>
-            <scope>runtime</scope>
-        </dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>org.springframework.core</artifactId>
@@ -178,11 +234,6 @@
 			<artifactId>aspectjweaver</artifactId>
 			<version>1.6.2</version>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>org.springframework.web.servlet</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
 		<!--
 			<dependency> <groupId>org.aspectj</groupId>
 			<artifactId>aspectjtools</artifactId> <version>1.6.2</version>
@@ -206,19 +257,16 @@
 			<groupId>org.apache.geronimo.specs</groupId>
 			<artifactId>geronimo-jpa_3.0_spec</artifactId>
 			<version>1.1.1</version>
-			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.geronimo.specs</groupId>
 			<artifactId>geronimo-jta_1.1_spec</artifactId>
 			<version>1.1.1</version>
-			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.datanucleus</groupId>
 			<artifactId>datanucleus-core</artifactId>
 			<version>1.1.5</version>
-			<scope>runtime</scope>
 			<exclusions>
 				<exclusion>
 					<artifactId>transaction-api</artifactId>
@@ -237,31 +285,18 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		<dependency>
-			<groupId>asm</groupId>
-			<artifactId>asm</artifactId>
-			<version>3.2</version>
-			<scope>compile</scope>
-		</dependency>
 		<!-- Google App Engine persistence runtime -->
 		<dependency>
 			<groupId>org.datanucleus</groupId>
 			<artifactId>datanucleus-appengine</artifactId>
-			<version>1.0.3</version>
-			<scope>compile</scope>
+			<version>1.0.3.final</version>
 		</dependency>
-		<dependency>
-            <groupId>javax.jdo</groupId>
-            <artifactId>jdo2-api</artifactId>
-            <version>2.3-eb</version>
-        </dependency>
 
 		<!-- Google App Engine API -->
 		<dependency>
 			<groupId>com.google</groupId>
 			<artifactId>appengine-sdk-1.2.0-api</artifactId>
 			<version>1.2.6</version>
-			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.google</groupId>
@@ -275,6 +310,8 @@
 			<version>1.2.0</version>
 			<scope>provided</scope>
 		</dependency>
+
+
 
 		<!-- Logging -->
 		<dependency>
@@ -297,6 +334,9 @@
 			<artifactId>slf4j-jdk14</artifactId>
 			<version>1.5.6</version>
 		</dependency>
+
+
+
 
 		<dependency>
 			<groupId>junit</groupId>
@@ -330,6 +370,7 @@
 
 	<build>
 		<finalName>${project.artifactId}</finalName>
+		<!-- outputDirectory>war/WEB-INF/classes</outputDirectory> -->
 		<sourceDirectory>src/main</sourceDirectory>
 		<testSourceDirectory>src/test</testSourceDirectory>
 		<pluginManagement>
@@ -350,6 +391,9 @@
 		<plugins>
 			<plugin>
 				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<warSourceDirectory>${basedir}/war</warSourceDirectory>
+				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -415,15 +459,98 @@
 				<version>2.4.3</version>
 			</plugin>
 
+			<!-- GWT -->
+
+			<plugin>
+				<groupId>com.totsp.gwt</groupId>
+				<artifactId>maven-googlewebtoolkit2-plugin</artifactId>
+				<version>2.0-RC1</version>
+				<configuration>
+					<contextXml>${basedir}/src/main/webapp/META-INF/contextGwtShell.xml
+					</contextXml>
+					<webXml>${basedir}/src/main/webapp/WEB-INF/web.xml</webXml>
+					<logLevel>INFO</logLevel>
+					<compileTargets>
+						<value>br.com.capela.amicao.Amicao</value>
+					</compileTargets>
+					<runTarget>com.totsp.sample.Application/Application.html
+					</runTarget>
+					<style>DETAILED</style>
+					<noServer>false</noServer>
+					<extraJvmArgs>-Xmx512m</extraJvmArgs>
+					<!--
+						this parameter is VERY important with automatic mode - has to
+						match the version in your declared deps
+					-->
+					<!--
+						if this does not match (default if left out is 1.5.3) you will
+						have mysterious errors
+					-->
+					<gwtVersion>${gwtVersion}</gwtVersion>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>mergewebxml</goal>
+							<goal>compile</goal>
+							<goal>test</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<!--  Use the dependency plugin to unpack gwt-dev-PLATFORM-libs.zip -->
+			<!--
+				(this is a replacement for the old "automatic" mode - useful if you
+				don't have GWT installed already, or you just want a maven way to
+				handle gwt deps)
+			-->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>unpack</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>unpack</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>com.google.gwt</groupId>
+									<artifactId>gwt-dev</artifactId>
+									<version>${gwtVersion}</version>
+									<classifier>${platform}-libs</classifier>
+									<type>zip</type>
+									<overWrite>false</overWrite>
+									<outputDirectory>${settings.localRepository}/com/google/gwt/gwt-dev/${gwtVersion}
+									</outputDirectory>
+								</artifactItem>
+							</artifactItems>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<!--
+				If you want to use the target/web.xml file mergewebxml produces,
+				tell the war plugin to use it. Also, exclude what you want from the
+				final artifact here.
+			-->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<webXml>target/web.xml</webXml>
+					<warSourceExcludes>.gwt-tmp/**</warSourceExcludes>
+				</configuration>
+			</plugin>
 
 			<plugin>
 				<groupId>org.datanucleus</groupId>
 				<artifactId>maven-datanucleus-plugin</artifactId>
-				<version>1.1.4</version>
+				<version>1.1.0</version>
 				<configuration>
-					<mappingIncludes>**/modelo/**.class</mappingIncludes>
-					<log4jConfiguration>src/main/resources/META-INF/log4j.properties</log4jConfiguration>
-					<persistenceUnitName>TesteAmicao</persistenceUnitName>
+					<mappingIncludes>**/*.class</mappingIncludes>
 					<verbose>true</verbose>
 					<enhancerName>ASM</enhancerName>
 					<api>JPA</api>
@@ -431,7 +558,6 @@
 				<executions>
 					<execution>
 						<phase>compile</phase>
-						<!-- <phase>process-classes</phase> -->
 						<goals>
 							<goal>enhance</goal>
 						</goals>
@@ -453,7 +579,7 @@
 				<artifactId>maven-antrun-plugin</artifactId>
 				<executions>
 					<execution>
-						<phase>install</phase>
+						<phase>install </phase>
 						<configuration>
 							<tasks>
 								<echo
