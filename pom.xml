@@ -8,9 +8,8 @@
 	<name>AMICAO</name>
 	<description>Sistema para gerenciamento de Pet Shop</description>
 	<properties>
-		<scala.version_280>2.8.0.r18462-b20090811081019</scala.version_280>
 		<scala.version>2.7.7</scala.version>
-		<spring.version>3.0.0.RC1</spring.version> 
+		<spring.version>3.0.0.RC3</spring.version> 
 		<gwtVersion>1.7.0</gwtVersion>
 	</properties>
 	<repositories>
@@ -86,13 +85,6 @@
 		</dependency>
 		
 		<dependency>
-			<groupId>hsqldb</groupId>
-			<artifactId>hsqldb</artifactId>
-			<version>1.8.0.7</version>
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
 			<groupId>org.scala-lang</groupId>
 			<artifactId>scala-library</artifactId>
 			<version>${scala.version}</version>
@@ -104,22 +96,14 @@
 			<version>${scala.version}</version>
 		</dependency>
 
-		<dependency>
-			<groupId>org.scala-lang</groupId>
-			<artifactId>scala-swing</artifactId>
-			<version>${scala.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.scalatest</groupId>
-			<artifactId>scalatest</artifactId>
-			<version>1.0</version>
-			<optional>true</optional>
-		</dependency>
-
-		<!-- Spring-->
-		        <!-- Use ASM 1.5.3 for Spring at runtime, but we need 3.0+ for Data Nucleus during compile
--->
+<!-- Spring -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>com.springsource.javax.servlet</artifactId>
+            <version>2.5.0</version>
+            <scope>provided</scope>
+        </dependency>
+        
         <dependency>
             <artifactId>com.springsource.org.objectweb.asm</artifactId>
             <groupId>org.objectweb.asm</groupId>
@@ -183,41 +167,33 @@
 			<artifactId>org.springframework.web.servlet</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-		<!--
-			<dependency> <groupId>org.aspectj</groupId>
-			<artifactId>aspectjtools</artifactId> <version>1.6.2</version>
-			</dependency> <dependency> <groupId>org.aspectj</groupId>
-			<artifactId>aspectjrt</artifactId> <version>1.6.2</version>
-			</dependency>
-		-->
+
 		<dependency>
-			<groupId>commons-dbcp</groupId>
-			<artifactId>commons-dbcp</artifactId>
-			<version>1.2.2</version>
+			<groupId>cglib</groupId>
+			<artifactId>cglib-nodep</artifactId>
+			<version>2.2</version>
 		</dependency>
+<!-- Spring -->
 
-		<!-- GAE -->
-
-		<!--
-			Data persistence APIs: JPA and JDO. Versions of datanucleus-core and
-			datanucleus-jpa are 1.1.1 which is newer than GAE jars (1.1.0)
-		-->
+<!-- Google App Engine -->
 		<dependency>
 			<groupId>org.apache.geronimo.specs</groupId>
 			<artifactId>geronimo-jpa_3.0_spec</artifactId>
 			<version>1.1.1</version>
 			<scope>compile</scope>
 		</dependency>
+
 		<dependency>
 			<groupId>org.apache.geronimo.specs</groupId>
 			<artifactId>geronimo-jta_1.1_spec</artifactId>
 			<version>1.1.1</version>
 			<scope>compile</scope>
 		</dependency>
+
 		<dependency>
 			<groupId>org.datanucleus</groupId>
 			<artifactId>datanucleus-core</artifactId>
-			<version>1.1.5</version>
+			<version>1.1.6</version>
 			<scope>runtime</scope>
 			<exclusions>
 				<exclusion>
@@ -237,19 +213,22 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+
 		<dependency>
 			<groupId>asm</groupId>
 			<artifactId>asm</artifactId>
 			<version>3.2</version>
 			<scope>compile</scope>
 		</dependency>
+
 		<!-- Google App Engine persistence runtime -->
 		<dependency>
 			<groupId>org.datanucleus</groupId>
 			<artifactId>datanucleus-appengine</artifactId>
-			<version>1.0.3</version>
+			<version>1.0.4</version>
 			<scope>compile</scope>
 		</dependency>
+		
 		<dependency>
             <groupId>javax.jdo</groupId>
             <artifactId>jdo2-api</artifactId>
@@ -259,21 +238,37 @@
 		<!-- Google App Engine API -->
 		<dependency>
 			<groupId>com.google</groupId>
-			<artifactId>appengine-sdk-1.2.0-api</artifactId>
-			<version>1.2.6</version>
+			<artifactId>appengine-api-1.0-sdk-1.2.8</artifactId>
+			<version>1.2.8</version>
 			<scope>compile</scope>
 		</dependency>
+		
 		<dependency>
 			<groupId>com.google</groupId>
 			<artifactId>appengine-tools</artifactId>
-			<version>1.2.0</version>
+			<version>1.2.8</version>
 			<scope>provided</scope>
 		</dependency>
+		
 		<dependency>
 			<groupId>com.google</groupId>
-			<artifactId>appengine-local-runtime-shared</artifactId>
-			<version>1.2.0</version>
+			<artifactId>appengine-local-runtime</artifactId>
+			<version>1.2.8</version>
 			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google</groupId>
+			<artifactId>appengine-api-stubs</artifactId>
+			<version>1.2.8</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google</groupId>
+			<artifactId>appengine-api-labs</artifactId>
+			<version>1.2.8</version>
+			<scope>test</scope>
 		</dependency>
 
 		<!-- Logging -->
@@ -282,33 +277,31 @@
 			<artifactId>jcl-over-slf4j</artifactId>
 			<version>1.5.6</version>
 		</dependency>
+		
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>jul-to-slf4j</artifactId>
 			<version>1.5.6</version>
 		</dependency>
+		
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>log4j-over-slf4j</artifactId>
 			<version>1.5.6</version>
 		</dependency>
+		
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-jdk14</artifactId>
 			<version>1.5.6</version>
 		</dependency>
+<!-- Google App Engine -->
 
+<!-- Tests -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.7</version>
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.scala-tools.testing</groupId>
-			<artifactId>specs</artifactId>
-			<version>1.6.0</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -326,6 +319,20 @@
 			<scope>test</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+			<version>1.8.0.7</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.scalatest</groupId>
+			<artifactId>scalatest</artifactId>
+			<version>1.0</version>
+			<optional>true</optional>
+		</dependency>	
+	
 	</dependencies>
 
 	<build>
@@ -375,7 +382,7 @@
 					<scalaVersion>${scala.version}</scalaVersion>
 					<args>
 						<arg>-target:jvm-1.5</arg>
-						<!-- arg>-encoding:UTF8</arg -->
+						<arg>-unchecked</arg>
 					</args>
 				</configuration>
 				<executions>
@@ -421,7 +428,7 @@
 				<artifactId>maven-datanucleus-plugin</artifactId>
 				<version>1.1.4</version>
 				<configuration>
-					<mappingIncludes>**/modelo/**.class</mappingIncludes>
+					<mappingIncludes>**/*.class</mappingIncludes>
 					<log4jConfiguration>src/main/resources/META-INF/log4j.properties</log4jConfiguration>
 					<persistenceUnitName>TesteAmicao</persistenceUnitName>
 					<verbose>true</verbose>
@@ -483,15 +490,6 @@
 					</execution>
 				</executions>
 			</plugin>
-
-			<!--
-				<plugin> <groupId>org.codehaus.mojo</groupId>
-				<artifactId>aspectj-maven-plugin</artifactId> <version>1.1</version>
-				<configuration> <complianceLevel>1.5</complianceLevel>
-				</configuration> <executions> <execution> <goals>
-				<goal>compile</goal> <goal>test-compile</goal> </goals> </execution>
-				</executions> </plugin>
-			-->
 		</plugins>
 	</build>
 	<profiles>

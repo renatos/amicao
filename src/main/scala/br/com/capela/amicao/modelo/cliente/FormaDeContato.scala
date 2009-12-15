@@ -10,11 +10,13 @@ import java.io.Serializable;
 
 import javax.persistence._
 
+import _root_.com.google.appengine.api.datastore.Key;
+
 import scala.reflect._
 
 @Entity
-class FormaDeContato extends Entidade[FormaDeContato]{
-
+class FormaDeContato extends Entidade[FormaDeContato]{ 
+	
   
 	@Column{val name="telefone1"}
     @BeanProperty var telefone1:String = _
@@ -28,8 +30,16 @@ class FormaDeContato extends Entidade[FormaDeContato]{
     @Column{val name="email"}
     @BeanProperty var email:String = _
 	
-	override def hashCode():Int = {
-		return new HashCodeBuilder().append(telefone1).append(celular).append(email).toHashCode();
-	}
-
+    override def hashCode():Int = {
+	return new HashCodeBuilder().append(telefone1).append(celular).append(email).toHashCode();
+    }
+	
+    def isMesmaEntidade(outro:FormaDeContato):Boolean =  {
+        new EqualsBuilder()
+        .append(telefone1, outro.telefone1)
+        .append(celular, outro.celular)
+        .append(email, outro.email)
+        .isEquals();
+    }
+    	
 }

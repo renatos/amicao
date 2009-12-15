@@ -5,39 +5,27 @@ import br.com.capela.amicao.servico.pet.PetService
 
 import br.com.capela.amicao.modelo.pet.Pet
 
-import org.scalatest.junit.JUnitRunner
-import org.junit.runner.RunWith
 import org.junit._
 import org.junit.Assert._
 
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.beans.factory.annotation.Autowired
 
-@RunWith(classOf[SpringJUnit4ClassRunner])
-@ContextConfiguration{val locations = Array("classpath*:**applicationContext.xml")}
-class ClienteServiceTest{
+import org.scalatest.junit.JUnitRunner
+import org.junit.runner.RunWith
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+class ClienteServiceTest extends AbstractAppEngineJpaTests{
 
     private var clienteService:ClienteService = _
     private var petService:PetService = _
-
+    
     @Autowired
     def setClienteService(service:ClienteService) = this.clienteService = service
 
     @Autowired
     def setPetService(service:PetService) = this.petService = service
-
-
-    @After
-    def apagar{
-        def clientes = clienteService.listarTodos();
-        clientes foreach { clienteService.excluir(_) }
-
-        def pets = petService.listarTodos();
-     
-        pets foreach {petService.excluir(_) }
-    }
-
+    
     @Test
     def persistirCliente{
         var cliente:Cliente = new Cliente();

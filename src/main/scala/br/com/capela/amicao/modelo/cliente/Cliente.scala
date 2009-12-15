@@ -1,12 +1,11 @@
 package br.com.capela.amicao.modelo.cliente;
 
-import org.apache.commons.lang.builder.EqualsBuilder;
-import org.apache.commons.lang.builder.HashCodeBuilder;
+import org.apache.commons.lang.builder.{EqualsBuilder, HashCodeBuilder, ReflectionToStringBuilder, ToStringStyle};
 
 import br.com.capela.amicao.modelo.base.Entidade;
 import br.com.capela.amicao.modelo.pet.Pet;
 
-import java.io.Serializable;
+import _root_.com.google.appengine.api.datastore.Key;
 
 import javax.persistence._
 
@@ -35,14 +34,28 @@ class Cliente extends Entidade[Cliente] {
     @PrimaryKeyJoinColumn()
     @BeanProperty var formaDeContato:FormaDeContato = _
 
-    @ManyToMany{
-        val cascade = Array(CascadeType.PERSIST),
+    @OneToMany{
+        val cascade = Array(CascadeType.ALL),
         val targetEntity =  classOf[Pet],
-        val fetch = FetchType.LAZY
+        val mappedBy = "proprietario"
     }
     @BeanProperty var pets : java.util.List[Pet] = new java.util.Vector[Pet]
-
-
+    
+    def inserePet(pet:Pet):Unit = {
+    	if(!this.pets.contains(pet)){
+    	   println("inserindo: "+pet.nome+" "+pet.especie)
+    	   this.pets.add(pet);
+    	   pet.proprietario = this
+    	}
+    }
+    
+    def removePet(pet:Pet):Unit = {
+    	if(this.pets.contains(pet)){
+    	   this.pets.remove(pet);
+    	   pet.proprietario = null;
+    	}
+    }
+	
     def isMesmaEntidade(outro:Cliente):Boolean =  {
         new EqualsBuilder()
         .append(nome, outro.nome)
@@ -56,6 +69,7 @@ class Cliente extends Entidade[Cliente] {
         .append(endereco)
         .toHashCode();
     }
-
+	
+	override def toString() = ReflectionToStringBuilder.toString(this, ToStringStyle.MULTI_LINE_STYLE)
 }
 

@@ -1,24 +1,20 @@
 package br.com.capela.amicao.modelo.pet
 
+
 import br.com.capela.amicao.servico.cliente.ClienteService
 import br.com.capela.amicao.servico.pet.PetService
 
 import br.com.capela.amicao.modelo.pet._
 import br.com.capela.amicao.modelo.cliente.Cliente
 
-import org.scalatest.junit.JUnitRunner
-import org.junit.runner.RunWith
 import org.junit._
 import org.junit.Assert._
 
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.beans.factory.annotation.Autowired
 
-@RunWith(classOf[SpringJUnit4ClassRunner])
-@ContextConfiguration{val locations = Array("classpath*:**applicationContext.xml")}
-class PetServiceTest{
 
+class PetServiceTest extends AbstractAppEngineJpaTests{
+ 
     private var clienteService:ClienteService = _
     private var petService:PetService = _
 
@@ -27,22 +23,12 @@ class PetServiceTest{
 
     @Autowired
     def setPetService(service:PetService) = this.petService = service
-
-
-    @After
-    def apagar{
-        def clientes = clienteService.listarTodos();
-        clientes foreach { clienteService.excluir(_) }
-
-        def pets = petService.listarTodos();
-
-        pets foreach {petService.excluir(_) }
-    }
-
+    
     @Test
     def persistirPet{
         var pet:Pet = new Pet();
-        pet.proprietarios.add(new Cliente())
+        pet.proprietario = new Cliente()
+        pet.proprietario.nome = "Renato"
         pet.nome = "Ian"
         petService salvar pet
         assertTrue(petService.listarTodos().size > 0)
@@ -51,7 +37,7 @@ class PetServiceTest{
     @Test
     def recuperarPet{
         var pet:Pet = new Pet();
-        pet.proprietarios.add(new Cliente())
+        pet.proprietario = new Cliente()
         pet.nome = "Veludo"
         petService salvar pet
         var petRecuperado = petService.getById(pet id)
@@ -64,7 +50,7 @@ class PetServiceTest{
     @Test
     def removerPet{
         var pet:Pet = new Pet();
-        pet.proprietarios.add(new Cliente())
+        pet.proprietario = new Cliente()
         pet.nome = "Pink"
         petService salvar pet
         var numeroDePetsAntesDaExclusao = petService.listarTodos().size

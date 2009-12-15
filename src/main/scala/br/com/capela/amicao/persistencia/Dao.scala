@@ -6,6 +6,9 @@ import javax.persistence._
 
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Repository
+import org.springframework.transaction.annotation.Transactional
+
+import _root_.com.google.appengine.api.datastore.Key;
 
 @Repository
 class Dao[T <: Entidade[_]] {
@@ -17,9 +20,8 @@ class Dao[T <: Entidade[_]] {
 		this.em = em
 	}
 
-	
 	def salvar(entidade:T):Unit = {
-		if (entidade.id < 0)
+		if (entidade.id != null)
 			em persist(entidade)
 		else
 			em merge(entidade)
@@ -28,14 +30,13 @@ class Dao[T <: Entidade[_]] {
 	def excluir(entidade:T) {
 		em remove(em.merge(entidade))
 	}
-	
-	def getById(clazz:Class[T], id:Long):T = {
+
+	def getById(clazz:Class[T], id:Key):T = {
 		em.find(clazz,id).asInstanceOf[T]
 	}
-
+	
 	def listarTodos(clazz:Class[_]):List[T] = {
-		implicit def toQueryString(clazz:Class[_]):String = {String.format("select e from %s e order by e.id", clazz.getSimpleName())}
-
+		implicit def toQueryString(clazz:Class[_]):String = {String.format("select e from %s e order by e.id", clazz.getName())}
 		var entidades:java.util.List[_] = em createQuery(clazz) getResultList()
 		List.fromArray(entidades.toArray()).asInstanceOf[List[T]]
 	}

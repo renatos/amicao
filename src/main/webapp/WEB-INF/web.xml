@@ -1,24 +1,38 @@
 <web-app xmlns="http://java.sun.com/xml/ns/javaee" version="2.5">
 
-  <context-param>
+	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
-			classpath*:META-INF/application-context.xml,
+			classpath*:META-INF/entitymanager.xml,
 			classpath*:META-INF/infrastructure-context.xml,
-			classpath*:META-INF/entitymanager.xml
+			classpath*:META-INF/application-context.xml
 		</param-value>
 	</context-param>
 
-  <!--servlet>
-    <servlet-name>amicao</servlet-name>
-    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-    <load-on-startup>1</load-on-startup>
-  </servlet-->
+	<servlet> <servlet-name>dispatcher</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup> </servlet>
+	<!--
+	<servlet>
+        <servlet-name>guestbook</servlet-name>
+        <servlet-class>br.com.capela.amicao.visao.GuestbookServlet</servlet-class>
+    </servlet>
+  -->
+    <servlet-mapping>
+        <servlet-name>dispatcher</servlet-name>
+        <url-pattern>*.do</url-pattern>
+    </servlet-mapping>
 
-  <listener>
-    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-  </listener>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener
+		</listener-class>
+	</listener>
+
 
 
 </web-app>
-

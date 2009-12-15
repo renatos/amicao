@@ -8,14 +8,17 @@ import br.com.capela.amicao.modelo.pet.Pet;
 
 import java.io.Serializable;
 
+import _root_.com.google.appengine.api.datastore.Key;
+
 import javax.persistence._
 
 import scala.reflect._
 
 @Entity
-class Endereco extends Entidade[Endereco] {
+class Endereco extends Entidade[Endereco]{
 	
-	@Column{val name="logradouro"}
+  
+    @Column{val name="logradouro"}
     @BeanProperty var logradouro:String = _
     
     @Column{val name="numero"}
