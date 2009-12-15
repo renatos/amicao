@@ -55,15 +55,15 @@ class Pet extends Entidade[Pet]{
     @Column{val name="sexo"}
     private var _sexo: String = SexoEnum.indefinido.toString
     
-    def especie(especie: EspecieEnum.Value):Unit = this._especie = especie.toString
+    def especie_=(especie: EspecieEnum.Value):Unit = this._especie = especie.toString
+    
+    def sexo_=(sexo: SexoEnum.Value):Unit = this._sexo = sexo.toString
     
     def especie = 
       this._especie match {
         case null => EspecieEnum.indefinida
         case _ 	  => EspecieEnum.valueOf(this._especie).getOrElse(EspecieEnum.indefinida)
       }
-
-    def sexo(sexo: SexoEnum.Value):Unit = this._sexo = sexo.toString
     
     def sexo = 
     	this._sexo match {

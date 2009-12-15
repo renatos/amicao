@@ -37,7 +37,7 @@ class GuestbookServlet {
 	def get(name:String, model: Model):String = {
 		var pet:Pet = new Pet();
 		pet.nome = "Li"
-     	pet.especie(EspecieEnum.felina);
+     	pet.especie = EspecieEnum.felina;
         pet.coresPredominantesDoPelo.add(new Cor("A","Azul"))
         pet.coresPredominantesDoPelo.add(new Cor("P","Preto"))
 		var cliente:Cliente  = new Cliente();

@@ -12,32 +12,27 @@ import _root_.com.google.appengine.api.datastore.Key;
 
 @Repository
 class Dao[T <: Entidade[_]] {
-
-	var em:EntityManager = null
+	
+	var entityManager:EntityManager = null
 
 	@PersistenceContext
-	def setEntityManager(em:EntityManager)={
-		this.em = em
-	}
-
-	def salvar(entidade:T):Unit = {
-		if (entidade.id != null)
-			em persist(entidade)
-		else
-			em merge(entidade)
-	}
-
-	def excluir(entidade:T) {
-		em remove(em.merge(entidade))
-	}
-
-	def getById(clazz:Class[T], id:Key):T = {
-		em.find(clazz,id).asInstanceOf[T]
+	def setEntityManager(em:EntityManager)= this.entityManager = em
+	
+	def salvar(entidade:T):Unit = entidade.id match  {
+		case null => 	entityManager persist(entidade)
+		case _ 	  =>	entityManager merge(entidade)
 	}
 	
+	def excluir(entidade:T) = entityManager remove(entityManager.merge(entidade))
+	
+	def getById(clazz:Class[T], id:Key):T = entityManager.find(clazz,id).asInstanceOf[T]
+
 	def listarTodos(clazz:Class[_]):List[T] = {
 		implicit def toQueryString(clazz:Class[_]):String = {String.format("select e from %s e order by e.id", clazz.getName())}
-		var entidades:java.util.List[_] = em createQuery(clazz) getResultList()
+		
+		println("this.type:"+classOf[T])
+		
+		var entidades:java.util.List[_] = entityManager createQuery(clazz) getResultList()
 		List.fromArray(entidades.toArray()).asInstanceOf[List[T]]
 	}
 
