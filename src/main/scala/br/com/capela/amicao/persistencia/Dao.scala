@@ -30,7 +30,7 @@ class Dao[T <: Entidade[_]] {
 	def listarTodos(clazz:Class[_]):List[T] = {
 		implicit def toQueryString(clazz:Class[_]):String = {String.format("select e from %s e order by e.id", clazz.getName())}
 		
-		println("this.type:"+classOf[T])
+		//println("this.type:"+classOf[T])
 		
 		var entidades:java.util.List[_] = entityManager createQuery(clazz) getResultList()
 		List.fromArray(entidades.toArray()).asInstanceOf[List[T]]

@@ -54,7 +54,7 @@ class PetServiceTest extends AbstractAppEngineJpaTests{
     }
 
     @Test
-    def altetarPet{
+    def alterarPet{
         var pet:Pet = new Pet();
         var renato:Cliente = new Cliente()
         renato.nome = "Renato"
