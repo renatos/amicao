@@ -1,8 +1,10 @@
 *.class
 *.jar
+*.swf
 /WEB-INF/*
 /src/site/*
 /amicao_cliente/target/*
 /amicao_servidor/target/*
 /amicao_servidor/.manager/*
 *.*~
+
