@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%"
+	backgroundColor="#FFFFFF"
+	label="Cliente" xmlns:local="*">
+	
+	<mx:Metadata>
+        	[Event(name="clienteCreated", type="ClienteEvent")]
+        	[Event(name="clienteUpdated", type="ClienteEvent")]
+        	[Event(name="clienteDeleted", type="ClienteEvent")]
+    	</mx:Metadata>
+	
+	<mx:Script>
+		<![CDATA[
+	
+		import mx.collections.ArrayCollection;
+		import mx.rpc.events.FaultEvent;
+		import mx.rpc.events.ResultEvent;
+		import mx.controls.Alert;
+		
+		import modelo.cliente.Cliente;
+		import modelo.cliente.ClienteEvent;
+			
+		[Bindable] public var cliente:Cliente;
+
+		private function save():void
+		{
+			cliente.codigo = codigo.text;
+			cliente.nome = nome.text;
+			service.salvar(cliente);	
+		}
+
+		private function deleteItem():void
+		{
+			service.excluir(cliente);		
+		}
+
+		private function create_resultHandler(event:ResultEvent):void
+		{
+			cliente.codigo = event.result.codigo;
+			dispatchEvent(new ClienteEvent(ClienteEvent.CREATED, cliente));		
+		}
+		
+		private function remove_resultHandler(event:ResultEvent):void
+		{
+			dispatchEvent(new ClienteEvent(ClienteEvent.CREATED, cliente));			
+		}
+
+		private function faultHandler(event:FaultEvent):void
+		{
+			Alert.show(event.fault.faultDetail);
+		}
+			
+		]]>
+	</mx:Script>
+	
+	<mx:RemoteObject id="service" destination="clienteService">
+		<mx:method name="salvar" result="create_resultHandler(event)"/>
+		<mx:method name="excluir" result="remove_resultHandler(event)"/>
+	</mx:RemoteObject>
+	
+	<mx:Form>
+		<mx:FormItem label="Código">
+			<mx:TextInput id="codigo" text="{cliente.codigo}" enabled="true"/>
+		</mx:FormItem>
+		<mx:FormItem label="Nome">
+			<mx:TextInput id="nome" text="{cliente.nome}"/>
+		</mx:FormItem>
+	</mx:Form>
+
+	<mx:HBox left="8" bottom="8">
+		<mx:Button label="Close" click="parent.removeChild(this)"/>
+		<mx:Button label="Save" click="save()"/>
+		<mx:Button label="Delete" click="deleteItem()"/>
+	</mx:HBox>
+	
+</mx:Canvas>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans
+        xmlns="http://www.springframework.org/schema/security"
+        xmlns:beans="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
+
+    <global-method-security secured-annotations="enabled" jsr250-annotations="enabled"/>
+
+    <http entry-point-ref="googleAccountsEntryPoint" auto-config="false" create-session="ifRequired">
+        <intercept-url pattern="/_ah/**" filters="none"/>
+        <intercept-url pattern="/favicon.ico" filters="none"/>
+        <intercept-url pattern="/**" access="ROLE_GOOGLE_APP_USER"/>
+        <!--intercept-url pattern="/flex/**" access="ROLE_GOOGLE_APP_USER" />
+        <intercept-url pattern="/messagebroker/**" access="ROLE_GOOGLE_APP_USER"/-->
+        <custom-filter position="PRE_AUTH_FILTER" ref="googleAccountsFilter"/>
+        <custom-filter position="LOGOUT_FILTER" ref="logoutFilter" />
+        <session-management session-fixation-protection="none"/>
+    </http>
+
+    <beans:bean id="googleAccountsFilter"
+                class="br.com.capela.amicao.servico.aplicacao.security.GoogleAccountsAuthenticationProcessingFilter">
+        <beans:property name="authenticationManager" ref="authenticationManager"/>
+        <beans:property name="authenticationDetailsSource" ref="googleAccountsAuthDetailsSource"/>
+        <beans:property name="userService" ref="userService"/>
+    </beans:bean>
+
+    <beans:bean id="logoutFilter" class="br.com.capela.amicao.servico.aplicacao.security.GoogleAccountsLogoutFilter">
+        <beans:constructor-arg value="/j_spring_security_logout"/>
+        <beans:constructor-arg>
+            <beans:list>
+                <beans:bean
+                        class="org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler"/>
+            </beans:list>
+        </beans:constructor-arg>
+        <beans:property name="afterLogoutUrl" value="/"/>
+        <beans:property name="userService" ref="userService"/>
+    </beans:bean>
+
+    <beans:bean id="preauthAuthProvider"
+                class="org.springframework.security.web.authentication.preauth.PreAuthenticatedAuthenticationProvider">
+        <beans:property name="preAuthenticatedUserDetailsService">
+            <beans:bean id="userDetailsService"
+                        class="org.springframework.security.web.authentication.preauth.PreAuthenticatedGrantedAuthoritiesUserDetailsService">
+            </beans:bean>
+        </beans:property>
+    </beans:bean>
+
+    <beans:bean id="googleAccountsEntryPoint"
+                class="br.com.capela.amicao.servico.aplicacao.security.GoogleLoginAuthenticationEntryPoint">
+        <beans:property name="userService" ref="userService"/>
+    </beans:bean>
+
+    <beans:bean id="googleAccountsAuthDetailsSource"
+                class="br.com.capela.amicao.servico.aplicacao.security.GoogleAccountsAuthenticationDetailsSource">
+        <beans:property name="userService" ref="userService"/>
+    </beans:bean>
+
+    <authentication-manager alias="authenticationManager">
+        <authentication-provider ref="preauthAuthProvider"/>
+    </authentication-manager>
+
+    <!--
+    <beans:bean id="entryPoint" class="org.springframework.security.web.authentication.Http403ForbiddenEntryPoint"/>
+
+    <beans:bean id="gaeAuthenticationProvider"
+                class="br.com.capela.amicao.servico.aplicacao.GoogleAccountsAuthenticationProcessingFilter">
+        <beans:property name="userService" ref="userService"/>
+    </beans:bean>
+    -->
+
+</beans:beans>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%"
+	backgroundColor="#FFFFFF"
+	label="Cliente" xmlns:local="*">
+	
+	<mx:Script>
+		<![CDATA[
+			
+			import mx.collections.ArrayCollection;
+			import mx.rpc.events.ResultEvent;
+			
+			import modelo.cliente.Cliente;
+			import modelo.cliente.ClienteEvent;
+			
+			[Bindable] private var clientes:ArrayCollection;
+		
+			private function cliente_listarTodos_resultHandler(event:ResultEvent):void
+			{
+				clientes = event.result as ArrayCollection
+			}
+			
+			public function openCliente(cliente:Cliente):void
+			{
+				var children:Array = tn.getChildren();
+				for (var i:int = 0; i<children.length; i++)
+				{
+					if (ClienteForm(children[i]).cliente.codigo == cliente.codigo)
+					{
+						tn.selectedChild = children[i];
+						return;
+					}
+				}
+				
+				var form:ClienteForm = new ClienteForm();
+				
+				form.addEventListener(ClienteEvent.CREATED, clienteCreatedHandler);
+				form.addEventListener(ClienteEvent.UPDATED, clienteUpdatedHandler);
+				form.addEventListener(ClienteEvent.DELETED, clienteDeletedHandler);
+				
+				tn.addChild(form);
+				form.cliente = cliente;
+				tn.selectedChild = form;
+			}	
+			
+			private function search():void
+			{
+				service.listarTodos();
+			}	
+			
+			private function clienteCreatedHandler(event:ClienteEvent):void
+			{
+				search();				
+			}
+
+			private function clienteUpdatedHandler(event:ClienteEvent):void
+			{
+				search();				
+			}
+
+			private function clienteDeletedHandler(event:ClienteEvent):void
+			{
+				tn.removeChild(event.target as ClienteForm);
+				search();				
+			}	
+		]]>
+	</mx:Script>
+	
+	<mx:RemoteObject id="service" destination="clienteService">
+		<mx:method name="listarTodos" result="cliente_listarTodos_resultHandler(event)"/>
+	</mx:RemoteObject>
+	
+	<mx:Panel title="Clientes" width="100%" height="100%">
+		<mx:ApplicationControlBar width="100%">
+			<mx:Button label="Search" click="search()"/>
+			<mx:Button label="Novo Cliente" click="openCliente(new Cliente())"/>
+		</mx:ApplicationControlBar>
+	
+		<mx:HDividedBox width="100%" height="100%">
+		<mx:DataGrid id="dg" dataProvider="{clientes}" width="30%" height="100%"
+			doubleClickEnabled="true"
+			doubleClick="openCliente(dg.selectedItem as Cliente)">
+			<mx:columns>
+				<mx:DataGridColumn dataField="codigo" headerText="Código"/>
+				<mx:DataGridColumn dataField="nome" headerText="Nome"/>
+			</mx:columns>
+		</mx:DataGrid>
+		<mx:TabNavigator id="tn" width="70%" height="100%"/>
+		</mx:HDividedBox>
+	</mx:Panel>
+	
+</mx:Canvas>

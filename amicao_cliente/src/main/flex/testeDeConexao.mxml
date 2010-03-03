@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml"
+	layout="vertical" creationComplete="loadConfiguration()">
+	
+	<mx:Script>
+		<![CDATA[
+			import mx.messaging.ChannelSet;
+			import mx.messaging.channels.AMFChannel;
+			import mx.controls.Alert;
+			import mx.rpc.AsyncToken;
+			import mx.rpc.AsyncResponder;
+			import mx.rpc.events.FaultEvent;
+			import mx.rpc.events.ResultEvent;
+
+			[Bindable]
+			private var user = null;
+			
+			private static var _amfChannel:AMFChannel = null;
+			private static var _amfPollingChannel:AMFChannel = null;
+
+			[Bindable]
+			public static var amfChannelSet:ChannelSet = null;
+			[Bindable]
+			public static var rtmpChannelSetWithFallBack:ChannelSet = null;
+
+			private function loadConfiguration():void
+			{
+				//conexaoLocal();
+				//service.getHoraAtual()
+				securityHelper.getAuthentication();
+				//var httpSrv:HTTPService = new HTTPService();
+				//httpSrv.url = "http://localhost:9191/helloworld/ChannelsConfiguration.xml";
+				//httpSrv.showBusyCursor = true;
+				//httpSrv.method = "GET";
+				//httpSrv.resultFormat = "xml";
+				//httpSrv.addEventListener(ResultEvent.RESULT, loadConfFileResultHandler);
+				//httpSrv.addEventListener(FaultEvent.FAULT, loadConfFileFaultHandler);
+				//httpSrv.send();					
+			}
+
+            private function userHandler(event:ResultEvent):void
+			{
+				user = event.result;
+				Alert.show(user.name);
+				Alert.show(user.authorities);
+			}
+
+			private function resultHandler(event:ResultEvent):void
+			{
+				var value:String = "";
+				if(event.result != null && event.result is String)
+				{
+					value = event.result as String;
+				}
+				else
+				{
+					value = "No value returned";
+				}
+				Alert.show(value);
+			}	
+
+			private function faultHandler(event:FaultEvent):void
+			{
+				Alert.show(event.fault.faultString);
+			}
+		]]>
+
+	</mx:Script>
+	
+	<mx:RemoteObject id="service" destination="testeDeConexaoService" showBusyCursor="true" >
+		<mx:method name="getHoraAtual" result="resultHandler(event)" fault="faultHandler(event)"/>
+	</mx:RemoteObject>
+    <mx:RemoteObject id="securityHelper" destination="securityHelper" fault="faultHandler(event)">
+		<mx:method name="getAuthentication" result="userHandler(event)"/>
+	</mx:RemoteObject>
+
+    <mx:ApplicationControlBar dock="true" paddingTop="0" paddingBottom="0"  >
+            <mx:Label text="Docked" fontWeight="bold" color="0x000000"/>
+
+            <mx:MenuBar id="myMenuBar" labelField="@label">
+                <mx:XMLList>
+                    <menuitem label="MenuItem A" >
+                        <menuitem label="SubMenuItem A-1" type="check"/>
+                        <menuitem label="SubMenuItem A-2" type="check"/>
+                    </menuitem>
+                    <menuitem label="MenuItem B"/>
+                    <menuitem label="MenuItem C"/>
+                    <menuitem label="MenuItem D" >
+                        <menuitem label="SubMenuItem D-1" type="radio" groupName="one"/>
+                        <menuitem label="SubMenuItem D-2" type="radio" groupName="one"/>
+                        <menuitem label="SubMenuItem D-3" type="radio" groupName="one"/>
+                    </menuitem>
+                </mx:XMLList>
+            </mx:MenuBar>
+            <mx:Spacer width="100%" />
+            <mx:Label text="{user.name}" />
+            <mx:Button label="logout" click="navigateToURL(new URLRequest('j_spring_security_logout'),'_self')" />
+      </mx:ApplicationControlBar>
+
+         
+</mx:Application>

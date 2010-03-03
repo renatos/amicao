@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd"
+       default-autowire="byName">
+
+    <!-- AppEngine Services to be created via the factory bean -->
+
+    <bean id="userService" class="com.google.appengine.api.users.UserServiceFactory"
+          factory-method="getUserService"/>
+
+    <bean id="mailService" class="com.google.appengine.api.mail.MailServiceFactory"
+          factory-method="getMailService"/>
+
+    <bean id="blobService" class="com.google.appengine.api.blobstore.BlobstoreServiceFactory"
+          factory-method="getBlobstoreService"/>
+
+    <bean id="datastoreService" class="com.google.appengine.api.datastore.DatastoreServiceFactory"
+          factory-method="getDatastoreService"/>
+
+    <bean id="imagesService" class="com.google.appengine.api.images.ImagesServiceFactory"
+          factory-method="getImagesService"/>
+
+    <bean id="memcacheService" class="com.google.appengine.api.memcache.MemcacheServiceFactory"
+          factory-method="getMemcacheService"/>
+
+    <bean id="quotaService" class="com.google.appengine.api.quota.QuotaServiceFactory"
+          factory-method="getQuotaService"/>
+
+    <bean id="urlFetchService" class="com.google.appengine.api.urlfetch.URLFetchServiceFactory"
+          factory-method="getURLFetchService"/>
+
+    <bean id="xmppService" class="com.google.appengine.api.xmpp.XMPPServiceFactory"
+          factory-method="getXMPPService"/>
+
+    <!--bean id="gson" class="com.google.gson.Gson"/-->
+</beans>
+

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml"
+	layout="vertical" creationComplete="loadConfiguration()">
+	
+	<mx:Script>
+		<![CDATA[
+			import mx.messaging.ChannelSet;
+			import mx.messaging.channels.AMFChannel;
+			import mx.controls.Alert;
+			import mx.rpc.events.ResultEvent;
+			import mx.rpc.events.FaultEvent;
+			import mx.rpc.http.mxml.HTTPService;
+			
+			private static var _amfChannel:AMFChannel = null;
+			private static var _amfPollingChannel:AMFChannel = null;
+
+			
+
+			[Bindable]
+			public static var amfChannelSet:ChannelSet = null;
+			[Bindable]
+			public static var rtmpChannelSetWithFallBack:ChannelSet = null;
+
+			private function loadConfiguration():void
+			{
+				conexaoLocal();		
+				service.getHoraAtual()
+				
+				//var httpSrv:HTTPService = new HTTPService();
+				//httpSrv.url = "http://localhost:9191/helloworld/ChannelsConfiguration.xml";
+				//httpSrv.showBusyCursor = true;
+				//httpSrv.method = "GET";
+				//httpSrv.resultFormat = "xml";
+				//httpSrv.addEventListener(ResultEvent.RESULT, loadConfFileResultHandler);
+				//httpSrv.addEventListener(FaultEvent.FAULT, loadConfFileFaultHandler);
+				//httpSrv.send();					
+			}
+
+			private function conexaoLocal():void
+			{
+				_amfChannel = new AMFChannel("my-amf", "http://localhost:8080/amicao/messagebroker/amf");
+
+				amfChannelSet = new ChannelSet();
+				amfChannelSet.addChannel(_amfChannel);
+			}			
+
+			private function resultHandler(event:ResultEvent):void
+			{
+				var value:String = "";
+				if(event.result != null && event.result is String)
+				{
+					value = event.result as String;
+				}
+				else
+				{
+					value = "No value returned";
+				}
+				Alert.show(value);
+			}	
+
+			private function faultHandler(event:FaultEvent):void
+			{
+				Alert.show(event.fault.faultString);
+			}
+		]]>
+
+	</mx:Script>
+	
+	<mx:RemoteObject id="service" destination="testeDeConexaoService" showBusyCursor="true" >
+		<mx:method name="getHoraAtual" result="resultHandler(event)" fault="faultHandler(event)"/>
+	</mx:RemoteObject>
+	
+
+</mx:Application>
