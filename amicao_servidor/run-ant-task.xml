@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<project name="run-ant-task" default="test" xmlns:artifact="antlib:org.apache.maven.artifact.ant">
+
+    <property name="sdk.dir" location="/home/renatos/develop/open_source/appengine-java-sdk-${appengine.version}"/>
+
+    <import file="${sdk.dir}/config/user/ant-macros.xml"/>
+
+    <target name="test" description="Starts the development server.">
+        <dev_appserver war="${basedir}/target/amicao_servidor">
+            <options>
+                <arg value="--jvm_flag=-Xdebug"/>
+                <arg value="--jvm_flag=-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005"/>
+            </options>
+        </dev_appserver>
+    </target>
+
+    <target name="deploy" description="Deploy the app in GAEJ.">
+        <dev_appserver war="${basedir}/target/amicao_servidor">
+            <options>
+                <arg value="--jvm_flag=-Xdebug"/>
+                <arg value="--jvm_flag=-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005"/>
+            </options>
+        </dev_appserver>
+    </target>
+
+</project>
+

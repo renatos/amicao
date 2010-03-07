@@ -6,160 +6,17 @@
   </component>
   <component name="ChangeListManager" verified="true">
     <list default="true" id="da4ce80d-323a-4091-bf7b-a876a04b1736" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/jdoconfig.xml" afterPath="" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/webapp/gui/gui.swf" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/br/com/capela/amicao/modelo/comum/Dinheiro.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterPath="" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/resources/META-INF/infrastructure-context.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/test/resources/META-INF/jdoconfig.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/resources/META-INF/jdoconfig.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/resources/META-INF/.svn/tmp/persistence.xml.2.tmp" afterPath="$PROJECT_DIR$/amicao_servidor/src/test/resources/META-INF/.svn/tmp/persistence.xml.2.tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/java/br/com/capela/amicao/modelo/produto/Fornecedor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/br/com/capela/amicao/modelo/venda/formaDePagamento/CartaoDeDebito.java" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/java/br/com/capela/amicao/modelo/venda/formaDePagamento/CartaoDeDebito.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/br/com/capela/amicao/modelo/produto/Produto.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/scala/br/com/capela/amicao/AbstractAppEngineJpaTests.scala" afterPath="" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_cliente/bin/main/flex/ClienteForm.mxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/resources/META-INF/persistence.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/scala/br/com/capela/amicao/modelo/pet/PetRepository.scala" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/scala/br/com/capela/amicao/modelo/pet/PetServiceTest.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/br/com/capela/amicao/modelo/venda/formaDePagamento/AVista.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/br/com/capela/amicao/public/amicao.styles.css" afterPath="" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/scala/br/com/capela/amicao/persistencia/Dao.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_cliente/src/main/flex/ClienteForm.mxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/.svn/text-base/persistence.xml.svn-base" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/resources/META-INF/.svn/text-base/persistence.xml.svn-base" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/scala/br/com/capela/amicao/modelo/base/Entidade.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.project" afterPath="$PROJECT_DIR$/.project" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/.settings/org.eclipse.wst.common.project.facet.core.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/resources/META-INF/orm.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/scala/br/com/capela/amicao/servico/Service.scala" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/br/com/capela/amicao/modelo/pet/EspecieEnum.scala" afterPath="" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/scala/br/com/capela/amicao/modelo/cliente/Cliente.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_cliente/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/java/br/com/capela/amicao/modelo/venda/formaDePagamento/AVista.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/java/br/com/capela/amicao/modelo/produto/Produto.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/application-context.xml" afterPath="" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/resources/META-INF/log4j.properties" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/br/com/capela/amicao/servico/cliente/ClienteService.scala" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/scala/br/com/capela/amicao/servico/cliente/ClienteService.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/logging.properties" afterPath="$PROJECT_DIR$/amicao_servidor/target/amicao_servidor/WEB-INF/logging.properties" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/br/com/capela/amicao/modelo/servico/TipoDeServico.java" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/java/br/com/capela/amicao/modelo/servico/TipoDeServico.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/war/WEB-INF/classes.timestamp" afterPath="$PROJECT_DIR$/amicao_servidor/target/test-classes.timestamp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/br/com/capela/amicao/modelo/cliente/Cliente.scala" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/br/com/capela/amicao/modelo/base/ObjetoValor.java" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/java/br/com/capela/amicao/modelo/base/ObjetoValor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/.svn/tmp/persistence.xml.tmp" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/resources/META-INF/.svn/tmp/persistence.xml.tmp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/br/com/capela/amicao/persistencia/Repository.scala" afterPath="" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/java/br/com/capela/amicao/modelo/comum/Dinheiro.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/br/com/capela/amicao/modelo/venda/Venda.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/scala/br/com/capela/amicao/modelo/cliente/ClienteServiceTest.scala" afterPath="" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/scala/br/com/capela/amicao/persistencia/pet/PetDao.scala" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/br/com/capela/amicao/modelo/base/Entidade.scala" afterPath="" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/test/resources/META-INF/persistence.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/.svn/tmp/persistence.xml.2.tmp" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/resources/META-INF/.svn/tmp/persistence.xml.2.tmp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/WEB-INF/classes/br/com/capela/amicao/public/amicao.html" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/br/com/capela/amicao/modelo/venda/formaDePagamento/CartaoDeCredito.java" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/java/br/com/capela/amicao/modelo/venda/formaDePagamento/CartaoDeCredito.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/resources/META-INF/.svn/entries" afterPath="$PROJECT_DIR$/amicao_servidor/src/test/resources/META-INF/.svn/entries" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/br/com/capela/amicao/modelo/cliente/Endereco.scala" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/resources/META-INF/.svn/tmp/persistence.xml.3.tmp" afterPath="$PROJECT_DIR$/amicao_servidor/src/test/resources/META-INF/.svn/tmp/persistence.xml.3.tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/webapp/WEB-INF/logging.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/.settings/org.eclipse.jdt.core.prefs" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/br/com/capela/amicao/modelo/venda/formaDePagamento/APrazo.java" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/java/br/com/capela/amicao/modelo/venda/formaDePagamento/APrazo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/scala/br/com/capela/amicao/modelo/pet/Pet.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/.settings/org.maven.ide.eclipse.prefs" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/br/com/capela/amicao/modelo/venda/ItemDeVenda.java" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/java/br/com/capela/amicao/modelo/venda/ItemDeVenda.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/resources/META-INF/.svn/tmp/persistence.xml.tmp" afterPath="$PROJECT_DIR$/amicao_servidor/src/test/resources/META-INF/.svn/tmp/persistence.xml.tmp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/br/com/capela/amicao/modelo/pet/PetRepository.scala" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/br/com/capela/amicao/modelo/venda/formaDePagamento/Cheque.java" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/java/br/com/capela/amicao/modelo/venda/formaDePagamento/Cheque.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.classpath" afterPath="$PROJECT_DIR$/amicao_servidor/.classpath" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/webapp/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/resources/META-INF/.svn/all-wcprops" afterPath="$PROJECT_DIR$/amicao_servidor/src/test/resources/META-INF/.svn/all-wcprops" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/WEB-INF/appengine-generated/datastore-indexes-auto.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.scala_dependencies" afterPath="" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_cliente/bin/main/flex/chat.mxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_cliente/src/main/flex/chat.mxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/scala/br/com/capela/amicao/modelo/pet/Raca.scala" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/br/com/capela/amicao/Amicao.gwt.xml" afterPath="" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/scala/br/com/capela/amicao/modelo/cliente/FormaDeContato.scala" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/br/com/capela/amicao/modelo/venda/FormaDePagamento.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/resources/META-INF/application-context.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.settings/com.google.appengine.eclipse.core.prefs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/br/com/capela/amicao/persistencia/pet/PetDao.scala" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/.svn/tmp/persistence.xml.3.tmp" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/resources/META-INF/.svn/tmp/persistence.xml.3.tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/webapp/WEB-INF/web.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/br/com/capela/amicao/visao/cliente/GuestbookServlet.scala" afterPath="" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_cliente/.settings/org.maven.ide.eclipse.prefs" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/br/com/capela/amicao/persistencia/cliente/ClienteDao.scala" afterPath="" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/java/br/com/capela/amicao/modelo/base/Entidade_old.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/br/com/capela/amicao/modelo/pet/Raca.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/appengine-web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/br/com/capela/amicao/TestEnvironment.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/br/com/capela/amicao/modelo/servico/Servico.java" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/java/br/com/capela/amicao/modelo/servico/Servico.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/resources/META-INF/persistence.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/br/com/capela/amicao/modelo/pet/Pet.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/br/com/capela/amicao/servico/Service.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/br/com/capela/amicao/modelo/cliente/ClienteRepository.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/resources/META-INF/infrastructure-context.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/br/com/capela/amicao/Main.java" afterPath="" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/webapp/WEB-INF/flex/services-config.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/.svn/all-wcprops" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/resources/META-INF/.svn/all-wcprops" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/br/com/capela/amicao/modelo/cliente/FormaDeContato.scala" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/br/com/capela/amicao/servico/pet/PetService.scala" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/scala/br/com/capela/amicao/servico/pet/PetService.scala" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/resources/META-INF/orm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/test.jsp" afterPath="" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/scala/br/com/capela/amicao/modelo/cliente/Endereco.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/scala/br/com/capela/amicao/modelo/pet/SexoEnum.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_cliente/.project" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/test/scala/br/com/capela/amicao/modelo/pet/PetServiceTest.scala" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/br/com/capela/amicao/persistencia/Dao.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.settings/com.google.gdt.eclipse.core.prefs" afterPath="" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/.project" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/scala/br/com/capela/amicao/persistencia/Repository.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/scala/br/com/capela/amicao/modelo/cliente/ClienteRepository.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/test/resources/META-INF/infrastructure-context.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/resources/META-INF/log4j.properties" afterPath="$PROJECT_DIR$/amicao_servidor/target/amicao_servidor/WEB-INF/classes/META-INF/log4j.properties" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.settings/com.google.gwt.eclipse.core.prefs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/orm.xml" afterPath="" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/webapp/WEB-INF/appengine-web.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/br/com/capela/amicao/modelo/Enumv.scala" afterPath="" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/test/resources/META-INF/log4j.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/.scala_dependencies" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/br/com/capela/amicao/modelo/pet/SexoEnum.scala" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/resources/META-INF/.svn/text-base/persistence.xml.svn-base" afterPath="$PROJECT_DIR$/amicao_servidor/src/test/resources/META-INF/.svn/text-base/persistence.xml.svn-base" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterPath="" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_cliente/.classpath" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/java/br/com/capela/amicao/modelo/venda/Venda.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/.svn/entries" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/resources/META-INF/.svn/entries" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/webapp/WEB-INF/dispatcher-servlet.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/br/com/capela/amicao/modelo/base/Entidade_old.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/log4j.properties" afterPath="$PROJECT_DIR$/amicao_servidor/target/test-classes/META-INF/log4j.properties" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pom_gwt.xml" afterPath="" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/scala/br/com/capela/amicao/modelo/pet/EspecieEnum.scala" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/br/com/capela/amicao/modelo/produto/Fornecedor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/war/WEB-INF/classes/br/com/capela/amicao/public/amicao.styles.css" afterPath="" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/java/br/com/capela/amicao/modelo/venda/FormaDePagamento.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/resources/META-INF/security-config.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" afterPath="" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/scala/br/com/capela/amicao/persistencia/cliente/ClienteDao.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/test/resources/META-INF/orm.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WEB-INF/appengine-generated/datastore-indexes-auto.xml" afterPath="$PROJECT_DIR$/WEB-INF/appengine-generated/datastore-indexes-auto.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/resources/META-INF/application-context.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jdbc.properties" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.settings/org.maven.ide.eclipse.prefs" afterPath="$PROJECT_DIR$/.settings/org.maven.ide.eclipse.prefs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/test/scala/br/com/capela/amicao/modelo/cliente/ClienteServiceTest.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/test/scala/br/com/capela/amicao/AbstractAppEngineJpaTests.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/pom.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/infrastructure-context.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/br/com/capela/amicao/public/amicao.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/br/com/capela/amicao/modelo/pet/Cor.scala" afterPath="" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/scala/br/com/capela/amicao/modelo/Enumv.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/src/main/scala/br/com/capela/amicao/modelo/pet/Cor.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/amicao.ipr" afterPath="$PROJECT_DIR$/amicao.ipr" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/amicao_servidor/amicao_servidor.iml" afterPath="$PROJECT_DIR$/amicao_servidor/amicao_servidor.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/amicao_servidor/run-ant-task.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/amicao_servidor/WEB-INF/appengine-generated/datastore-indexes-auto.xml" afterPath="$PROJECT_DIR$/amicao_servidor/WEB-INF/appengine-generated/datastore-indexes-auto.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/amicao_servidor/pom.xml" afterPath="$PROJECT_DIR$/amicao_servidor/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/amicao.iws" afterPath="$PROJECT_DIR$/amicao.iws" />
     </list>
-    <ignored path="amicao.iws" />
-    <ignored mask="*.class" />
     <ignored path=".idea/workspace.xml" />
+    <ignored mask="*.class" />
     <ignored mask="*.jar" />
+    <ignored path="amicao.iws" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,47 +37,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/amicao_servidor/src/main/scala/br/com/capela/amicao/servico/aplicacao/security/GoogleAccountsAuthenticationProcessingFilter.scala" line="25" class="Class at GoogleAccountsAuthenticationProcessingFilter.scala:25" package="">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/amicao_servidor/src/main/scala/br/com/capela/amicao/servico/aplicacao/security/GoogleAccountsAuthenticationProcessingFilter.scala" line="32" class="Class at GoogleAccountsAuthenticationProcessingFilter.scala:32" package="">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/amicao_servidor/src/main/scala/br/com/capela/amicao/servico/aplicacao/security/GoogleAccountsAuthenticationProcessingFilter.scala" line="19" class="Class at GoogleAccountsAuthenticationProcessingFilter.scala:19" package="">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
     <breakpoint_any>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -268,8 +84,8 @@
       <property name="field_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByClasses" value="true" />
       <property name="exception_breakpoints_viewId" value="TABLE" />
-      <property name="exception_breakpoints_groupByClasses" value="true" />
       <property name="field_breakpoints_viewId" value="TABLE" />
+      <property name="exception_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByMethods" value="false" />
     </ui_properties>
   </component>
@@ -279,46 +95,28 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Service.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/amicao_servidor/src/main/scala/br/com/capela/amicao/servico/Service.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="51" selection-start="579" selection-end="579" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="remoting-config.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/amicao_servidor/src/main/webapp/WEB-INF/flex/remoting-config.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="22" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="services-config.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/amicao_servidor/src/main/webapp/WEB-INF/flex/services-config.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="26" selection-start="126" selection-end="126" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TesteDeConexaoService.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/amicao_servidor/src/main/scala/br/com/capela/amicao/servico/aplicacao/TesteDeConexaoService.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="44" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SecurityHelper.scala" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SecurityHelper.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/amicao_servidor/src/main/scala/br/com/capela/amicao/servico/aplicacao/security/SecurityHelper.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="51" selection-start="474" selection-end="474" vertical-scroll-proportion="0.66568047">
+            <state line="16" column="51" selection-start="510" selection-end="510" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/amicao_servidor/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="655" column="41" selection-start="23438" selection-end="23438" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="run-ant-task.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/amicao_servidor/run-ant-task.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="61" selection-start="733" selection-end="733" vertical-scroll-proportion="0.63903743">
               <folding />
             </state>
           </provider>
@@ -379,8 +177,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/amicao_cliente/src/main/flex/chat.mxml" />
-        <option value="$PROJECT_DIR$/amicao_servidor/src/main/scala/br/com/capela/amicao/visao/IndexController.scala" />
         <option value="$PROJECT_DIR$/amicao_servidor/src/main/webapp/index.html" />
         <option value="$PROJECT_DIR$/amicao_servidor/src/main/scala/br/com/capela/amicao/visao/MainController.scala" />
         <option value="$PROJECT_DIR$/amicao_servidor/src/main/scala/br/com/capela/amicao/servico/Service.scala" />
@@ -390,6 +186,8 @@
         <option value="$PROJECT_DIR$/amicao_servidor/src/main/webapp/WEB-INF/flex/services-config.xml" />
         <option value="$PROJECT_DIR$/amicao_servidor/src/main/scala/br/com/capela/amicao/servico/aplicacao/TesteDeConexaoService.scala" />
         <option value="$PROJECT_DIR$/amicao_servidor/src/main/scala/br/com/capela/amicao/servico/aplicacao/security/SecurityHelper.scala" />
+        <option value="$PROJECT_DIR$/amicao_servidor/pom.xml" />
+        <option value="$PROJECT_DIR$/amicao_servidor/run-ant-task.xml" />
       </list>
     </option>
   </component>
@@ -458,341 +256,14 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane />
+      </pane>
+      <pane id="Favorites" />
+      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane />
       </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao_v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao_v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao_servidor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao_v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao_servidor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao_v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao_servidor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao_v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao_servidor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flex" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao_v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao_servidor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao_v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao_servidor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao_v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao_servidor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="security" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao_v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao_servidor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aplicacao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao_v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao_servidor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao_v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao_cliente" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao_v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao_cliente" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao_v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao_cliente" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao_v2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="amicao_cliente" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flex" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="Favorites" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -802,7 +273,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="preferences.keymap" />
+    <property name="options.lastSelected" value="preferences.sourceCode" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../idea_workspace/clojureTest" />
     <property name="project.structure.side.proportion" value="0.21965317" />
     <property name="GoToClass.includeJavaFiles" value="false" />
@@ -811,9 +282,9 @@
     <property name="GoToAction.allIncluded" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -831,7 +302,7 @@
     <option name="referencePos" value="0" />
     <option name="showLabels" value="true" />
   </component>
-  <component name="RunManager" selected="Remote.Unnamed">
+  <component name="RunManager" selected="Remote.Debug">
     <configuration default="false" name="FiberRingScala" type="Application" factoryName="Application" temporary="true">
       <extension name="snapshooter" />
       <option name="MAIN_CLASS_NAME" value="br.com.capela.amicao.servico.aplicacao.FiberRingScala" />
@@ -1210,7 +681,7 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="false" name="Unnamed" type="Remote" factoryName="Remote">
+    <configuration default="false" name="Debug" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
@@ -1229,7 +700,7 @@
       <item index="1" class="java.lang.String" itemvalue="JUnit.All in amicao_servidor" />
       <item index="2" class="java.lang.String" itemvalue="Maven.amicao_servidor [test]" />
       <item index="3" class="java.lang.String" itemvalue="Maven.amicao_servidor [org.apache.maven.plugins:maven-surefire-plugin:2.4.3:test]" />
-      <item index="4" class="java.lang.String" itemvalue="Remote.Unnamed" />
+      <item index="4" class="java.lang.String" itemvalue="Remote.Debug" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -1257,27 +728,27 @@
     <supportedVersion>125</supportedVersion>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1280" height="773" extended-state="0" />
-    <editor active="false" />
+    <frame x="-6" y="26" width="1292" height="780" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="QAPlug Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33067092" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2141707" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2494244" sideWeight="0.77386934" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2891374" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24939074" sideWeight="0.77386934" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28821656" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24979524" sideWeight="0.5798722" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21493027" sideWeight="0.6988728" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33631194" sideWeight="0.72611463" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39907905" sideWeight="0.66164154" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Log4jMonitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28712058" sideWeight="0.6988728" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32981315" sideWeight="0.72611463" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32789317" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28985506" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26273885" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32937685" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2141707" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32663316" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Metrics" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29970327" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847276" sideWeight="0.69849247" order="4" side_tool="false" content_ui="tabs" />
@@ -1317,81 +788,77 @@
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
+    <buildFile url="file://$PROJECT_DIR$/amicao_servidor/run-ant-task.xml">
+      <antCommandLine value="" />
+      <runInBackground value="true" />
+      <targetFilters />
+      <treeView value="true" />
+      <verbose value="true" />
+      <viewClosedWhenNoErrors value="false" />
+    </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/amicao_servidor/src/main/scala/br/com/capela/amicao/visao/MainController.scala">
+    <entry file="file://$PROJECT_DIR$/amicao_servidor/src/main/scala/br/com/capela/amicao/servico/aplicacao/security/SecurityHelper.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="18" selection-start="308" selection-end="320" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/amicao_servidor/src/main/scala/br/com/capela/amicao/servico/Service.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="51" selection-start="579" selection-end="579" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/amicao_servidor/src/main/webapp/WEB-INF/flex/remoting-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="22" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/amicao_cliente/bin/main/flex/ClienteForm.mxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/amicao_cliente/bin/main/flex/chat.mxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="55" selection-start="859" selection-end="859" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/amicao_cliente/src/main/flex/testeDeConexao.mxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="738" selection-end="738" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="16" column="51" selection-start="510" selection-end="510" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/amicao_cliente/bin/main/flex/testeDeConexao.mxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="46" selection-start="1285" selection-end="1285" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="41" column="46" selection-start="1285" selection-end="1285" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/amicao_servidor/src/main/webapp/WEB-INF/dispatcher-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="48" selection-start="2455" selection-end="2455" vertical-scroll-proportion="0.0">
+        <state line="45" column="48" selection-start="2455" selection-end="2455" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/amicao_cliente/bin/main/flex/chat.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="55" selection-start="859" selection-end="859" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/amicao_cliente/src/main/flex/testeDeConexao.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="738" selection-end="738" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/amicao_cliente/bin/main/flex/ClienteForm.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/appengine-tools/1.3.1/appengine-tools-1.3.1.jar!/com/google/appengine/tools/development/DevAppServerMain.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="71" selection-start="389" selection-end="389" vertical-scroll-proportion="0.21818182">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/amicao_servidor/src/main/webapp/WEB-INF/flex/services-config.xml">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/appengine-tools/1.3.1/appengine-tools-1.3.1.jar!/com/google/appengine/tools/KickStart.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="26" selection-start="126" selection-end="126" vertical-scroll-proportion="0.0">
+        <state line="10" column="13" selection-start="366" selection-end="366" vertical-scroll-proportion="0.23893805">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/amicao_servidor/src/main/scala/br/com/capela/amicao/servico/aplicacao/TesteDeConexaoService.scala">
+    <entry file="file://$PROJECT_DIR$/amicao_servidor/src/main/scala/br/com/capela/amicao/servico/aplicacao/security/GoogleAccountsAuthenticationProcessingFilter.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="44" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0">
+        <state line="32" column="0" selection-start="1218" selection-end="1218" vertical-scroll-proportion="0.63812155">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/amicao_servidor/src/main/scala/br/com/capela/amicao/servico/aplicacao/security/SecurityHelper.scala">
+    <entry file="file://$PROJECT_DIR$/amicao_servidor/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="51" selection-start="474" selection-end="474" vertical-scroll-proportion="0.66568047">
+        <state line="655" column="41" selection-start="23438" selection-end="23438" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/amicao_servidor/run-ant-task.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="61" selection-start="733" selection-end="733" vertical-scroll-proportion="0.63903743">
           <folding />
         </state>
       </provider>

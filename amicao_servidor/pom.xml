@@ -653,6 +653,9 @@
         <plugins>
             <plugin>
                 <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <packagingExcludes>**/*</packagingExcludes>    
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -745,32 +748,32 @@
                 <artifactId>maven-antrun-plugin</artifactId>
                 <executions>
                     <execution>
-                        <phase>install</phase>
-                        <configuration>
-                            <tasks>
-                                <echo message="Will download Google App Engine for Java and run appcfg tool to upload the application."/>
-                                <mkdir dir="${java.io.tmpdir}/gaej"/>
-                                <get
-                                        src="http://googleappengine.googlecode.com/files/appengine-java-sdk-${appengine.version}.zip"
-                                        dest="${java.io.tmpdir}/gaej/sdk.zip" verbose="yes"
-                                        usetimestamp="true"/>
-                                <unzip src="${java.io.tmpdir}/gaej/sdk.zip" dest="${java.io.tmpdir}/gaej"/>
-                                <java fork="false" classname="com.google.appengine.tools.admin.AppCfg">
-                                    <sysproperty key="appengine.sdk.root"
-                                                 value="${java.io.tmpdir}/gaej/appengine-java-sdk-${appengine.version}"/>
-                                    <classpath>
-                                        <fileset dir="${java.io.tmpdir}/gaej">
-                                            <include name="**/*.jar"/>
-                                        </fileset>
-                                    </classpath>
-                                    <arg value="update"/>
-                                    <arg value="${basedir}/target/${project.artifactId}"/>
-                                </java>
-                            </tasks>
-                        </configuration>
+                        <id>test</id>
+                        <phase>package</phase>
                         <goals>
                             <goal>run</goal>
                         </goals>
+                        <configuration>
+                            <tasks>
+                                <ant antfile="${basedir}/run-ant-task.xml" target="test">
+                                    <property name="appengine.version" value="${appengine.version}" />
+                                </ant>
+                            </tasks>
+                        </configuration>
+                    </execution>
+                     <execution>
+                        <id>deploy</id> 
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <tasks>
+                                <ant antfile="${basedir}/run-ant-task.xml" target="deploy">
+                                    <property name="appengine.version" value="${appengine.version}" />
+                                </ant>
+                            </tasks>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
